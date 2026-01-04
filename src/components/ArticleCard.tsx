@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Clock, ArrowRight } from 'lucide-react';
+import { articleContents } from '@/data/articleContent';
 
 interface ArticleCardProps {
-  index: number;
+  id: number;
+  slug: string;
   category: string;
   readTime: number;
   date: string;
@@ -17,8 +20,9 @@ const categoryColors: Record<string, string> = {
   'Legal': 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20',
 };
 
-const ArticleCard = ({ index, category, readTime, date }: ArticleCardProps) => {
-  const { t } = useLanguage();
+const ArticleCard = ({ id, slug, category, readTime, date }: ArticleCardProps) => {
+  const { language, t } = useLanguage();
+  const content = articleContents[slug];
   
   return (
     <article className="group relative bg-card rounded-2xl border border-border overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-card">
@@ -32,7 +36,7 @@ const ArticleCard = ({ index, category, readTime, date }: ArticleCardProps) => {
       {/* Image Placeholder */}
       <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
         <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-          <span className="text-3xl font-bold text-primary">{index}</span>
+          <span className="text-3xl font-bold text-primary">{id}</span>
         </div>
       </div>
 
@@ -49,22 +53,22 @@ const ArticleCard = ({ index, category, readTime, date }: ArticleCardProps) => {
 
         {/* Title */}
         <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
-          {t(`article${index}.title`)}
+          {content?.title[language] || slug}
         </h3>
 
         {/* Excerpt */}
         <p className="text-muted-foreground mb-4 line-clamp-2">
-          {t(`article${index}.excerpt`)}
+          {content?.excerpt[language] || ''}
         </p>
 
         {/* Read More Link */}
-        <a
-          href="#"
+        <Link
+          to={`/article/${slug}`}
           className="inline-flex items-center gap-2 text-primary font-semibold group/link"
         >
           {t('articles.readMore')}
           <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-        </a>
+        </Link>
       </div>
     </article>
   );

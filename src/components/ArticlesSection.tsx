@@ -1,14 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import ArticleCard from './ArticleCard';
-
-const articles = [
-  { index: 1, category: 'VPN', readTime: 5, date: '2026-01-02' },
-  { index: 2, category: 'Security', readTime: 7, date: '2025-12-28' },
-  { index: 3, category: 'Authentication', readTime: 4, date: '2025-12-25' },
-  { index: 4, category: 'Privacy', readTime: 6, date: '2025-12-20' },
-  { index: 5, category: 'Phishing', readTime: 5, date: '2025-12-15' },
-  { index: 6, category: 'Legal', readTime: 8, date: '2025-12-10' },
-];
+import { articles } from '@/data/articles';
 
 const ArticlesSection = () => {
   const { t } = useLanguage();
@@ -27,7 +19,7 @@ const ArticlesSection = () => {
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article) => (
-            <ArticleCard key={article.index} {...article} />
+            <ArticleCard key={article.id} {...article} />
           ))}
         </div>
       </div>
