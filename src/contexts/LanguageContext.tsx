@@ -27,17 +27,17 @@ const translations: Translations = {
   'articles.minRead': { en: 'min read', fr: 'min de lecture' },
   
   // Article titles
-  'article1.title': { en: 'VPN: Your First Line of Defense', fr: 'VPN : Votre Première Ligne de Défense' },
-  'article1.excerpt': { en: 'Learn how VPNs encrypt your connection and why they\'re essential for privacy.', fr: 'Découvrez comment les VPN chiffrent votre connexion et pourquoi ils sont essentiels.' },
+  'article1.title': { en: 'VPN: How Does It Protect You?', fr: 'VPN : Comment Vous Protège-t-il ?' },
+  'article1.excerpt': { en: 'Understand how VPNs work and why they matter for your online privacy.', fr: 'Comprenez le fonctionnement des VPN et pourquoi ils comptent pour votre vie privée.' },
   
-  'article2.title': { en: 'Password Managers: A Complete Guide', fr: 'Gestionnaires de Mots de Passe : Guide Complet' },
-  'article2.excerpt': { en: 'Stop using the same password everywhere. Here\'s how to manage them securely.', fr: 'Arrêtez d\'utiliser le même mot de passe partout. Voici comment les gérer en sécurité.' },
+  'article2.title': { en: 'Password Security: Why Encryption Matters', fr: 'Sécurité des Mots de Passe : Pourquoi le Chiffrement Compte' },
+  'article2.excerpt': { en: 'Learn how password managers protect your credentials with encryption.', fr: 'Découvrez comment les gestionnaires protègent vos identifiants avec le chiffrement.' },
   
-  'article3.title': { en: 'Two-Factor Authentication Explained', fr: 'L\'Authentification à Deux Facteurs Expliquée' },
-  'article3.excerpt': { en: 'Add an extra layer of security to all your accounts with 2FA.', fr: 'Ajoutez une couche de sécurité supplémentaire à tous vos comptes avec la 2FA.' },
+  'article3.title': { en: 'Two-Factor Authentication: Your Second Line of Defense', fr: 'Authentification à Deux Facteurs : Votre Seconde Ligne de Défense' },
+  'article3.excerpt': { en: 'Understand how 2FA works and why it stops most hackers.', fr: 'Comprenez comment la 2FA fonctionne et pourquoi elle arrête la plupart des hackers.' },
   
-  'article4.title': { en: 'Social Media Privacy Settings', fr: 'Paramètres de Confidentialité Réseaux Sociaux' },
-  'article4.excerpt': { en: 'Take control of what you share online with these essential settings.', fr: 'Prenez le contrôle de ce que vous partagez en ligne avec ces paramètres essentiels.' },
+  'article4.title': { en: 'Disk Encryption: Protecting Your Files with VeraCrypt', fr: 'Chiffrement de Disque : Protéger Vos Fichiers avec VeraCrypt' },
+  'article4.excerpt': { en: 'Learn how full-disk encryption keeps your data safe if your device is stolen.', fr: 'Découvrez comment le chiffrement de disque protège vos données en cas de vol.' },
   
   'article5.title': { en: 'Phishing: How to Spot Fake Emails', fr: 'Phishing : Comment Repérer les Faux Emails' },
   'article5.excerpt': { en: 'Recognize and avoid phishing attempts before they compromise your data.', fr: 'Reconnaissez et évitez les tentatives de phishing avant qu\'elles ne compromettent vos données.' },
@@ -49,9 +49,7 @@ const translations: Translations = {
   'footer.description': { en: 'Your trusted resource for data protection and online privacy.', fr: 'Votre ressource de confiance pour la protection des données et la vie privée en ligne.' },
   'footer.rights': { en: 'All rights reserved.', fr: 'Tous droits réservés.' },
   'footer.quickLinks': { en: 'Quick Links', fr: 'Liens Rapides' },
-  'footer.newsletter': { en: 'Newsletter', fr: 'Newsletter' },
-  'footer.subscribe': { en: 'Subscribe', fr: "S'abonner" },
-  'footer.emailPlaceholder': { en: 'Enter your email', fr: 'Entrez votre email' },
+  'footer.resources': { en: 'Resources', fr: 'Ressources' },
 };
 
 interface LanguageContextType {
@@ -65,7 +63,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>(() => {
     const saved = localStorage.getItem('language') as Language;
-    return saved || 'fr';
+    return saved || 'en';
   });
 
   const toggleLanguage = () => {

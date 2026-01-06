@@ -52,24 +52,22 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Newsletter */}
+          {/* Resources */}
           <div>
             <h3 className="text-lg font-bold text-foreground mb-4">
-              {t('footer.newsletter')}
+              {t('footer.resources')}
             </h3>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder={t('footer.emailPlaceholder')}
-                className="w-full px-4 py-3 rounded-lg bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-              />
-              <button
-                type="submit"
-                className="w-full px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
-              >
-                {t('footer.subscribe')}
-              </button>
-            </form>
+            <nav className="space-y-3">
+              <a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors">
+                Privacy Guides
+              </a>
+              <a href="https://ssd.eff.org" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors">
+                EFF Surveillance Self-Defense
+              </a>
+              <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors">
+                CNIL
+              </a>
+            </nav>
           </div>
         </div>
 
