@@ -6,701 +6,867 @@ interface ArticleContent {
 }
 
 export const articleContents: Record<string, ArticleContent> = {
-  'vpn-first-line-defense': {
+  'vpn-how-it-works': {
     title: {
-      en: 'VPN: Your First Line of Defense',
-      fr: 'VPN : Votre Première Ligne de Défense'
+      en: 'VPN: How Does It Protect You?',
+      fr: 'VPN : Comment Vous Protège-t-il ?'
     },
     excerpt: {
-      en: 'Learn how VPNs encrypt your connection and why they\'re essential for privacy.',
-      fr: 'Découvrez comment les VPN chiffrent votre connexion et pourquoi ils sont essentiels.'
+      en: 'Understand how VPNs work and why they matter for your online privacy.',
+      fr: 'Comprenez le fonctionnement des VPN et pourquoi ils comptent pour votre vie privée.'
     },
     content: {
-      en: `## What is a VPN?
+      en: `## What Happens When You Browse Without a VPN?
 
-A **VPN (Virtual Private Network)** creates an encrypted tunnel between your device and a remote server. All your internet traffic passes through this tunnel, hiding your real IP address and protecting your data from prying eyes.
+Imagine you're sitting in a coffee shop, connected to the public Wi-Fi. You check your email, log into your bank, browse social media. What you might not realize is that **anyone on that same network** could potentially see what you're doing.
 
-## Why Use a VPN?
+Here's what's exposed:
+- **Your ISP** (Internet Service Provider) sees every website you visit
+- **The coffee shop's network** can log your activity
+- **Hackers on the same Wi-Fi** can intercept unencrypted data
 
-- **Privacy**: Your ISP can't see what websites you visit
-- **Security**: Protection on public Wi-Fi networks
-- **Anonymity**: Websites see the VPN server's IP, not yours
-- **Access**: Bypass geographic restrictions
+### A Real-World Example
 
-## The Critical Importance of No-Log Policy
+Let's say you're on vacation and connect to the hotel Wi-Fi. You log into your email. Without encryption, a malicious actor on the same network could capture your login credentials using simple tools. This is called a **"man-in-the-middle" attack**.
 
-The most important feature when choosing a VPN is a **strict no-log policy**. This means the VPN provider:
+## How Does a VPN Actually Work?
 
-- Does NOT record your browsing activity
-- Does NOT store connection timestamps
-- Does NOT keep your real IP address
-- Cannot provide your data to authorities (because they don't have it)
+A VPN creates an **encrypted tunnel** between your device and a remote server. Think of it like sending a letter in a locked box instead of a postcard.
 
-⚠️ **Warning**: Many VPNs claim "no logs" but actually collect data. Always verify through independent audits.
+### Step by Step:
 
-## Our Recommendation: Mullvad VPN
+1. **You connect to the VPN** → Your device establishes a secure connection to a VPN server
+2. **Your data gets encrypted** → Everything you send is scrambled using strong encryption (like AES-256)
+3. **The VPN server acts as a middleman** → Websites see the VPN's IP address, not yours
+4. **Data comes back through the tunnel** → Responses are encrypted and sent back to you
 
-After extensive research, we recommend **Mullvad VPN** for several reasons:
+### The Coffee Shop Scenario - With VPN
 
-### Why Mullvad?
+Now, even if a hacker is on the same coffee shop Wi-Fi:
+- They see encrypted gibberish, not your actual data
+- They can't see which websites you're visiting
+- Your login credentials remain protected
 
-1. **True No-Log Policy**: Verified by independent audits
-2. **Anonymous Payment**: Pay with cash or cryptocurrency
-3. **No Account Required**: Use a random account number instead of email
-4. **Open Source**: Their code is publicly auditable
-5. **Based in Sweden**: Strong privacy laws, outside 14 Eyes for VPN data
-6. **Fixed Price**: €5/month, no tricks or upsells
+## What Does "No-Log" Policy Mean?
 
-### How to Get Started
+When choosing a VPN, the most critical feature is a **no-log policy**. This means the VPN provider:
 
-1. Visit [mullvad.net](https://mullvad.net)
-2. Generate an account number (no email required)
-3. Add time to your account
-4. Download the app for your device
-5. Connect and browse securely
+- Does NOT record which websites you visit
+- Does NOT store timestamps of your connections
+- Does NOT keep your real IP address on file
+- **Cannot provide your data** to anyone (because they don't have it)
 
-## VPNs to Avoid
+⚠️ **Why this matters**: If a VPN keeps logs, your data could be subpoenaed by governments or stolen in a data breach.
 
-Some VPNs should be avoided due to privacy concerns:
+## When Should You Use a VPN?
 
-- **Free VPNs**: If it's free, you're the product
-- **VPNs based in 14 Eyes countries**: Potential data sharing
-- **VPNs with unclear ownership**: Who actually controls your data?
+### Always Use a VPN:
+- On **public Wi-Fi** (cafes, airports, hotels)
+- When accessing **sensitive accounts** (banking, email)
+- When you want to **prevent ISP tracking**
 
-## Conclusion
+### VPN Won't Help If:
+- You log into accounts (they know it's you)
+- You download malware (VPN doesn't scan files)
+- You share personal info on websites
 
-A VPN is an essential tool for online privacy, but choosing the right one matters. Mullvad stands out for its commitment to anonymity and transparency.`,
-      fr: `## Qu'est-ce qu'un VPN ?
+## Limitations to Understand
 
-Un **VPN (Virtual Private Network)** crée un tunnel chiffré entre votre appareil et un serveur distant. Tout votre trafic internet passe par ce tunnel, cachant votre véritable adresse IP et protégeant vos données des regards indiscrets.
+A VPN is not a magic privacy shield:
 
-## Pourquoi Utiliser un VPN ?
-
-- **Confidentialité** : Votre FAI ne peut pas voir les sites que vous visitez
-- **Sécurité** : Protection sur les réseaux Wi-Fi publics
-- **Anonymat** : Les sites web voient l'IP du serveur VPN, pas la vôtre
-- **Accès** : Contourner les restrictions géographiques
-
-## L'Importance Cruciale de la Politique No-Log
-
-La caractéristique la plus importante lors du choix d'un VPN est une **politique stricte de non-journalisation (no-log)**. Cela signifie que le fournisseur VPN :
-
-- N'enregistre PAS votre activité de navigation
-- Ne stocke PAS les horodatages de connexion
-- Ne conserve PAS votre véritable adresse IP
-- Ne peut pas fournir vos données aux autorités (car ils ne les ont pas)
-
-⚠️ **Attention** : De nombreux VPN prétendent "no logs" mais collectent en réalité des données. Vérifiez toujours par des audits indépendants.
-
-## Notre Recommandation : Mullvad VPN
-
-Après des recherches approfondies, nous recommandons **Mullvad VPN** pour plusieurs raisons :
-
-### Pourquoi Mullvad ?
-
-1. **Vraie Politique No-Log** : Vérifiée par des audits indépendants
-2. **Paiement Anonyme** : Payez en espèces ou en cryptomonnaie
-3. **Pas de Compte Requis** : Utilisez un numéro de compte aléatoire au lieu d'un email
-4. **Open Source** : Leur code est auditable publiquement
-5. **Basé en Suède** : Lois strictes sur la vie privée
-6. **Prix Fixe** : 5€/mois, sans pièges ni ventes additionnelles
-
-### Comment Commencer
-
-1. Visitez [mullvad.net](https://mullvad.net)
-2. Générez un numéro de compte (pas d'email requis)
-3. Ajoutez du temps à votre compte
-4. Téléchargez l'application pour votre appareil
-5. Connectez-vous et naviguez en sécurité
-
-## VPNs à Éviter
-
-Certains VPN doivent être évités pour des raisons de confidentialité :
-
-- **VPN gratuits** : Si c'est gratuit, vous êtes le produit
-- **VPN basés dans les pays 14 Eyes** : Partage potentiel de données
-- **VPN avec propriétaire flou** : Qui contrôle réellement vos données ?
+- **Websites can still track you** through cookies and fingerprinting
+- **Your VPN provider** could theoretically see your traffic (hence why no-log matters)
+- **Performance may decrease** due to encryption overhead
 
 ## Conclusion
 
-Un VPN est un outil essentiel pour la vie privée en ligne, mais choisir le bon est crucial. Mullvad se distingue par son engagement envers l'anonymat et la transparence.`
+A VPN is an essential tool for protecting your data on untrusted networks. It encrypts your connection, hides your IP address, and prevents eavesdropping. However, it's one piece of the privacy puzzle—not a complete solution.`,
+      fr: `## Que Se Passe-t-il Quand Vous Naviguez Sans VPN ?
+
+Imaginez que vous êtes assis dans un café, connecté au Wi-Fi public. Vous consultez vos emails, vous connectez à votre banque, parcourez les réseaux sociaux. Ce que vous ne réalisez peut-être pas, c'est que **n'importe qui sur ce même réseau** pourrait potentiellement voir ce que vous faites.
+
+Voici ce qui est exposé :
+- **Votre FAI** (Fournisseur d'Accès Internet) voit chaque site que vous visitez
+- **Le réseau du café** peut enregistrer votre activité
+- **Les hackers sur le même Wi-Fi** peuvent intercepter les données non chiffrées
+
+### Un Exemple Concret
+
+Disons que vous êtes en vacances et vous connectez au Wi-Fi de l'hôtel. Vous vous connectez à votre email. Sans chiffrement, un acteur malveillant sur le même réseau pourrait capturer vos identifiants de connexion avec des outils simples. C'est ce qu'on appelle une attaque **"man-in-the-middle"**.
+
+## Comment Fonctionne Réellement un VPN ?
+
+Un VPN crée un **tunnel chiffré** entre votre appareil et un serveur distant. Pensez-y comme envoyer une lettre dans une boîte verrouillée plutôt qu'une carte postale.
+
+### Étape par Étape :
+
+1. **Vous vous connectez au VPN** → Votre appareil établit une connexion sécurisée avec un serveur VPN
+2. **Vos données sont chiffrées** → Tout ce que vous envoyez est brouillé avec un chiffrement fort (comme AES-256)
+3. **Le serveur VPN agit comme intermédiaire** → Les sites web voient l'adresse IP du VPN, pas la vôtre
+4. **Les données reviennent par le tunnel** → Les réponses sont chiffrées et renvoyées vers vous
+
+### Le Scénario du Café - Avec VPN
+
+Maintenant, même si un hacker est sur le même Wi-Fi du café :
+- Il voit du charabia chiffré, pas vos vraies données
+- Il ne peut pas voir quels sites vous visitez
+- Vos identifiants de connexion restent protégés
+
+## Que Signifie une Politique "No-Log" ?
+
+Lors du choix d'un VPN, la caractéristique la plus critique est une **politique no-log**. Cela signifie que le fournisseur VPN :
+
+- N'enregistre PAS les sites que vous visitez
+- Ne stocke PAS les horodatages de vos connexions
+- Ne conserve PAS votre vraie adresse IP
+- **Ne peut pas fournir vos données** à quiconque (car ils ne les ont pas)
+
+⚠️ **Pourquoi c'est important** : Si un VPN garde des logs, vos données pourraient être réclamées par les gouvernements ou volées lors d'une fuite de données.
+
+## Quand Devriez-Vous Utiliser un VPN ?
+
+### Utilisez Toujours un VPN :
+- Sur **Wi-Fi public** (cafés, aéroports, hôtels)
+- En accédant à des **comptes sensibles** (banque, email)
+- Quand vous voulez **empêcher le tracking FAI**
+
+### Le VPN N'Aidera Pas Si :
+- Vous vous connectez à des comptes (ils savent que c'est vous)
+- Vous téléchargez des malwares (le VPN ne scanne pas les fichiers)
+- Vous partagez des infos personnelles sur les sites
+
+## Limitations à Comprendre
+
+Un VPN n'est pas un bouclier magique de confidentialité :
+
+- **Les sites peuvent toujours vous tracker** via cookies et fingerprinting
+- **Votre fournisseur VPN** pourrait théoriquement voir votre trafic (d'où l'importance du no-log)
+- **Les performances peuvent diminuer** à cause de l'overhead de chiffrement
+
+## Conclusion
+
+Un VPN est un outil essentiel pour protéger vos données sur les réseaux non fiables. Il chiffre votre connexion, cache votre adresse IP, et empêche l'écoute. Cependant, c'est une pièce du puzzle de la confidentialité—pas une solution complète.`
     },
     references: [
-      { title: 'Mullvad VPN Official Site', url: 'https://mullvad.net' },
-      { title: 'Mullvad Audit Reports', url: 'https://mullvad.net/en/blog/tag/audits' },
-      { title: 'EFF: Choosing a VPN', url: 'https://ssd.eff.org/module/choosing-vpn-thats-right-you' },
-      { title: 'Privacy Guides - VPN Overview', url: 'https://www.privacyguides.org/vpn/' }
+      { title: 'EFF: What is a VPN?', url: 'https://ssd.eff.org/module/choosing-vpn-thats-right-you' },
+      { title: 'How VPN Encryption Works', url: 'https://www.cloudflare.com/learning/access-management/what-is-a-vpn/' },
+      { title: 'Privacy Guides - VPN Overview', url: 'https://www.privacyguides.org/vpn/' },
+      { title: 'CNIL - VPN Expliqué', url: 'https://www.cnil.fr/fr/definition/vpn-virtual-private-network' }
     ]
   },
 
-  'password-managers-guide': {
+  'password-security-encryption': {
     title: {
-      en: 'Password Managers: A Complete Guide',
-      fr: 'Gestionnaires de Mots de Passe : Guide Complet'
+      en: 'Password Security: Why Encryption Matters',
+      fr: 'Sécurité des Mots de Passe : Pourquoi le Chiffrement Compte'
     },
     excerpt: {
-      en: 'Stop using the same password everywhere. Here\'s how to manage them securely.',
-      fr: 'Arrêtez d\'utiliser le même mot de passe partout. Voici comment les gérer en sécurité.'
+      en: 'Learn how password managers protect your credentials with encryption.',
+      fr: 'Découvrez comment les gestionnaires protègent vos identifiants avec le chiffrement.'
     },
     content: {
-      en: `## The Password Problem
+      en: `## The Problem With Human Memory
 
-The average person has over **100 online accounts**. If you're using the same password (or variations) for most of them, you're one data breach away from disaster.
+The average person has over **100 online accounts**. Our brains simply aren't designed to remember 100 unique, complex passwords. So what do most people do?
 
-## Why You Need a Password Manager
+- Use the same password everywhere
+- Use simple variations (Password1, Password2...)
+- Write them on sticky notes
+- Use easily guessable passwords (birthdays, pet names)
 
-A password manager is a secure vault that:
+### Why This Is Dangerous
 
-- **Generates** strong, unique passwords for every account
-- **Stores** them encrypted with a master password
-- **Auto-fills** login forms securely
-- **Syncs** across all your devices
+When a company gets hacked (and they regularly do), attackers get a list of email/password combinations. If you used the same password on other sites, **all those accounts are now compromised**.
 
-## Our Recommendation: Bitwarden
+In 2024 alone, billions of passwords were leaked in data breaches. If your password was "123456" or "password", you're not alone—these are still the most common passwords.
 
-We strongly recommend **Bitwarden** as your password manager. Here's why:
+## How Password Managers Work
 
-### Why Bitwarden?
+A password manager is essentially a **secure vault** protected by one master password. Here's how the security works:
 
-1. **Open Source**: The entire codebase is publicly available on GitHub
-2. **Audited**: Regular third-party security audits
-3. **Free Tier**: Fully functional free version for individuals
-4. **Cross-Platform**: Works on every device and browser
-5. **Self-Hostable**: You can run your own server if desired
-6. **End-to-End Encrypted**: Only you can decrypt your vault
+### The Encryption Process
 
-### Bitwarden vs Others
+1. **You create a master password** → This is the only password you need to remember
+2. **The master password derives an encryption key** → Using algorithms like PBKDF2 or Argon2
+3. **Your vault is encrypted** → Using AES-256 encryption (the same used by governments)
+4. **Zero-knowledge architecture** → The company never sees your master password or vault contents
 
-| Feature | Bitwarden | LastPass | 1Password |
-|---------|-----------|----------|-----------|
-| Open Source | ✅ | ❌ | ❌ |
-| Free Tier | ✅ Full | Limited | ❌ |
-| Self-Host | ✅ | ❌ | ❌ |
-| Security Breaches | None | Multiple | None |
+### What This Means in Practice
 
-### Getting Started with Bitwarden
-
-1. Visit [bitwarden.com](https://bitwarden.com)
-2. Create an account with a **strong master password**
-3. Install browser extensions and mobile apps
-4. Import passwords from your browser
-5. Start generating unique passwords for new accounts
+Even if someone steals the encrypted vault file:
+- Without your master password, it's **mathematically infeasible** to decrypt
+- AES-256 would take billions of years to crack with current technology
+- The company can't access your passwords (they don't have the key)
 
 ## Creating a Strong Master Password
 
-Your master password is the key to everything. Make it:
+Your master password is the key to everything. Here's how to create one that's both strong AND memorable:
 
-- **Long**: At least 16 characters
-- **Memorable**: Use a passphrase like "correct-horse-battery-staple"
-- **Unique**: Never use it anywhere else
+### Use a Passphrase
 
-### Passphrase Example
+Instead of: \`P@ssw0rd123!\` (weak, hard to type)
 
-Instead of: \`P@ssw0rd123!\`
+Use: \`purple-elephant-dancing-moonlight-42\` (strong, memorable)
 
-Use: \`purple-elephant-dancing-moonlight-42\`
+### Why Passphrases Work
 
-The second is both stronger AND easier to remember.
+- **Length matters more than complexity** → "correcthorsebatterystaple" is stronger than "Tr0ub4dor!"
+- **Easier to remember** → You can visualize the scene
+- **Harder to crack** → Each word multiplies the possibilities
 
-## Additional Security Features
+### The Math
 
-### Two-Factor Authentication (2FA)
+A 4-word passphrase from a list of 7,776 words = 7,776⁴ = **3.6 quadrillion** combinations.
 
-Always enable 2FA on your Bitwarden account:
+## What Makes a Password Manager Secure
 
-- Use an authenticator app (not SMS)
-- Store backup codes securely
-- Consider a hardware key for maximum security
+### End-to-End Encryption
+Your data is encrypted on your device before it's sent anywhere. The company never has access to your unencrypted data.
 
-### Emergency Access
+### Open Source Advantage
+Open source password managers (like Bitwarden) allow anyone to inspect the code. Security researchers worldwide verify there are no backdoors or vulnerabilities.
 
-Bitwarden allows you to designate trusted contacts who can access your vault in emergencies.
+### Regular Security Audits
+Reputable password managers undergo independent security audits. These reports are publicly available, showing the company has nothing to hide.
+
+## Common Concerns Addressed
+
+### "What if the password manager gets hacked?"
+Even if hackers steal the encrypted vault database:
+- Your vault remains encrypted with YOUR key
+- The company doesn't have your master password
+- Properly implemented encryption is essentially unbreakable
+
+### "Isn't putting all eggs in one basket risky?"
+The alternative is worse:
+- Reusing passwords means one breach = all accounts compromised
+- A password manager with a strong master password is statistically safer
 
 ## Best Practices
 
-1. **Never share passwords** via email or chat
-2. **Enable 2FA** on all important accounts
-3. **Regularly audit** your vault for weak passwords
-4. **Use the password generator** for all new accounts
-5. **Keep your master password offline** (written in a safe)
+1. **Use a unique password** for every account
+2. **Enable two-factor authentication** on your password manager
+3. **Use the password generator** for new accounts
+4. **Keep your master password offline** in a secure location
+5. **Review your vault** periodically for weak passwords
 
 ## Conclusion
 
-A password manager is no longer optional—it's essential. Bitwarden offers the best combination of security, transparency, and usability. Start using it today.`,
-      fr: `## Le Problème des Mots de Passe
+Password managers use the same encryption that protects government secrets. Combined with a strong master passphrase, they're the most practical way to have unique, uncrackable passwords for every account.`,
+      fr: `## Le Problème de la Mémoire Humaine
 
-La personne moyenne possède plus de **100 comptes en ligne**. Si vous utilisez le même mot de passe (ou des variations) pour la plupart, vous êtes à une fuite de données d'un désastre.
+La personne moyenne possède plus de **100 comptes en ligne**. Nos cerveaux ne sont tout simplement pas conçus pour mémoriser 100 mots de passe uniques et complexes. Alors que font la plupart des gens ?
 
-## Pourquoi Vous Avez Besoin d'un Gestionnaire
+- Utilisent le même mot de passe partout
+- Utilisent des variations simples (Password1, Password2...)
+- Les écrivent sur des post-it
+- Utilisent des mots de passe faciles à deviner (dates d'anniversaire, noms d'animaux)
 
-Un gestionnaire de mots de passe est un coffre-fort sécurisé qui :
+### Pourquoi C'est Dangereux
 
-- **Génère** des mots de passe forts et uniques pour chaque compte
-- **Stocke** le tout chiffré avec un mot de passe maître
-- **Remplit automatiquement** les formulaires de connexion
-- **Synchronise** sur tous vos appareils
+Quand une entreprise se fait pirater (et ça arrive régulièrement), les attaquants obtiennent une liste de combinaisons email/mot de passe. Si vous avez utilisé le même mot de passe sur d'autres sites, **tous ces comptes sont maintenant compromis**.
 
-## Notre Recommandation : Bitwarden
+Rien qu'en 2024, des milliards de mots de passe ont été divulgués dans des fuites de données. Si votre mot de passe était "123456" ou "password", vous n'êtes pas seul—ce sont toujours les mots de passe les plus courants.
 
-Nous recommandons fortement **Bitwarden** comme gestionnaire de mots de passe. Voici pourquoi :
+## Comment Fonctionnent les Gestionnaires de Mots de Passe
 
-### Pourquoi Bitwarden ?
+Un gestionnaire de mots de passe est essentiellement un **coffre-fort sécurisé** protégé par un mot de passe maître. Voici comment fonctionne la sécurité :
 
-1. **Open Source** : Le code entier est disponible publiquement sur GitHub
-2. **Audité** : Audits de sécurité tiers réguliers
-3. **Gratuit** : Version gratuite entièrement fonctionnelle pour les particuliers
-4. **Multi-Plateforme** : Fonctionne sur tous les appareils et navigateurs
-5. **Auto-Hébergeable** : Vous pouvez faire tourner votre propre serveur
-6. **Chiffrement de Bout en Bout** : Vous seul pouvez déchiffrer votre coffre
+### Le Processus de Chiffrement
 
-### Bitwarden vs Autres
+1. **Vous créez un mot de passe maître** → C'est le seul mot de passe dont vous devez vous souvenir
+2. **Le mot de passe maître dérive une clé de chiffrement** → En utilisant des algorithmes comme PBKDF2 ou Argon2
+3. **Votre coffre est chiffré** → En utilisant le chiffrement AES-256 (le même utilisé par les gouvernements)
+4. **Architecture zéro connaissance** → L'entreprise ne voit jamais votre mot de passe maître ou le contenu du coffre
 
-| Fonctionnalité | Bitwarden | LastPass | 1Password |
-|----------------|-----------|----------|-----------|
-| Open Source | ✅ | ❌ | ❌ |
-| Version Gratuite | ✅ Complète | Limitée | ❌ |
-| Auto-Hébergement | ✅ | ❌ | ❌ |
-| Failles de Sécurité | Aucune | Multiples | Aucune |
+### Ce Que Cela Signifie en Pratique
 
-### Commencer avec Bitwarden
-
-1. Visitez [bitwarden.com](https://bitwarden.com)
-2. Créez un compte avec un **mot de passe maître fort**
-3. Installez les extensions navigateur et apps mobiles
-4. Importez les mots de passe de votre navigateur
-5. Commencez à générer des mots de passe uniques
+Même si quelqu'un vole le fichier du coffre chiffré :
+- Sans votre mot de passe maître, il est **mathématiquement impossible** de déchiffrer
+- AES-256 prendrait des milliards d'années à craquer avec la technologie actuelle
+- L'entreprise ne peut pas accéder à vos mots de passe (elle n'a pas la clé)
 
 ## Créer un Mot de Passe Maître Fort
 
-Votre mot de passe maître est la clé de tout. Il doit être :
+Votre mot de passe maître est la clé de tout. Voici comment en créer un qui soit à la fois fort ET mémorable :
 
-- **Long** : Au moins 16 caractères
-- **Mémorable** : Utilisez une phrase secrète
-- **Unique** : Ne l'utilisez jamais ailleurs
+### Utilisez une Phrase Secrète
 
-### Exemple de Phrase Secrète
+Au lieu de : \`M0tDeP@sse123!\` (faible, difficile à taper)
 
-Au lieu de : \`M0tDeP@sse123!\`
+Utilisez : \`elephant-violet-danse-clair-lune-42\` (fort, mémorable)
 
-Utilisez : \`elephant-violet-danse-clair-lune-42\`
+### Pourquoi les Phrases Secrètes Fonctionnent
 
-La seconde est à la fois plus forte ET plus facile à retenir.
+- **La longueur compte plus que la complexité** → "chevalblancnapoleonfrance" est plus fort que "Tr0ub4dor!"
+- **Plus facile à retenir** → Vous pouvez visualiser la scène
+- **Plus difficile à craquer** → Chaque mot multiplie les possibilités
 
-## Fonctionnalités de Sécurité Avancées
+### Les Mathématiques
 
-### Authentification à Deux Facteurs (2FA)
+Une phrase de 4 mots à partir d'une liste de 7 776 mots = 7 776⁴ = **3,6 quadrillions** de combinaisons.
 
-Activez toujours la 2FA sur votre compte Bitwarden :
+## Ce Qui Rend un Gestionnaire Sécurisé
 
-- Utilisez une app d'authentification (pas de SMS)
-- Stockez les codes de secours en sécurité
-- Considérez une clé matérielle pour une sécurité maximale
+### Chiffrement de Bout en Bout
+Vos données sont chiffrées sur votre appareil avant d'être envoyées où que ce soit. L'entreprise n'a jamais accès à vos données non chiffrées.
 
-### Accès d'Urgence
+### L'Avantage Open Source
+Les gestionnaires open source (comme Bitwarden) permettent à quiconque d'inspecter le code. Des chercheurs en sécurité du monde entier vérifient qu'il n'y a pas de portes dérobées.
 
-Bitwarden vous permet de désigner des contacts de confiance qui peuvent accéder à votre coffre en cas d'urgence.
+### Audits de Sécurité Réguliers
+Les gestionnaires réputés subissent des audits de sécurité indépendants. Ces rapports sont publics, montrant que l'entreprise n'a rien à cacher.
+
+## Préoccupations Courantes
+
+### "Et si le gestionnaire se fait pirater ?"
+Même si les hackers volent la base de données des coffres chiffrés :
+- Votre coffre reste chiffré avec VOTRE clé
+- L'entreprise n'a pas votre mot de passe maître
+- Un chiffrement correctement implémenté est essentiellement incassable
+
+### "N'est-ce pas risqué de mettre tous les œufs dans le même panier ?"
+L'alternative est pire :
+- Réutiliser les mots de passe signifie qu'une brèche = tous les comptes compromis
+- Un gestionnaire avec un mot de passe maître fort est statistiquement plus sûr
 
 ## Bonnes Pratiques
 
-1. **Ne partagez jamais** les mots de passe par email ou chat
-2. **Activez la 2FA** sur tous les comptes importants
-3. **Auditez régulièrement** votre coffre pour les mots de passe faibles
-4. **Utilisez le générateur** pour tous les nouveaux comptes
-5. **Gardez votre mot de passe maître hors ligne** (écrit dans un coffre)
+1. **Utilisez un mot de passe unique** pour chaque compte
+2. **Activez l'authentification à deux facteurs** sur votre gestionnaire
+3. **Utilisez le générateur** pour les nouveaux comptes
+4. **Gardez votre mot de passe maître hors ligne** dans un endroit sûr
+5. **Révisez votre coffre** périodiquement pour les mots de passe faibles
 
 ## Conclusion
 
-Un gestionnaire de mots de passe n'est plus optionnel—c'est essentiel. Bitwarden offre la meilleure combinaison de sécurité, transparence et facilité d'utilisation. Commencez à l'utiliser dès aujourd'hui.`
+Les gestionnaires de mots de passe utilisent le même chiffrement qui protège les secrets gouvernementaux. Combinés avec une phrase secrète forte, ils sont la façon la plus pratique d'avoir des mots de passe uniques et incassables pour chaque compte.`
     },
     references: [
-      { title: 'Bitwarden Official Site', url: 'https://bitwarden.com' },
-      { title: 'Bitwarden GitHub Repository', url: 'https://github.com/bitwarden' },
-      { title: 'Bitwarden Security Audits', url: 'https://bitwarden.com/help/is-bitwarden-audited/' },
-      { title: 'EFF: Creating Strong Passwords', url: 'https://ssd.eff.org/module/creating-strong-passwords' }
+      { title: 'How Password Encryption Works', url: 'https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/' },
+      { title: 'EFF: Creating Strong Passwords', url: 'https://ssd.eff.org/module/creating-strong-passwords' },
+      { title: 'NIST Password Guidelines', url: 'https://pages.nist.gov/800-63-3/sp800-63b.html' },
+      { title: 'Bitwarden Security Whitepaper', url: 'https://bitwarden.com/help/what-encryption-is-used/' }
     ]
   },
 
   'two-factor-authentication': {
     title: {
-      en: 'Two-Factor Authentication Explained',
-      fr: 'L\'Authentification à Deux Facteurs Expliquée'
+      en: 'Two-Factor Authentication: Your Second Line of Defense',
+      fr: 'Authentification à Deux Facteurs : Votre Seconde Ligne de Défense'
     },
     excerpt: {
-      en: 'Add an extra layer of security to all your accounts with 2FA.',
-      fr: 'Ajoutez une couche de sécurité supplémentaire à tous vos comptes avec la 2FA.'
+      en: 'Understand how 2FA works and why it stops most hackers.',
+      fr: 'Comprenez comment la 2FA fonctionne et pourquoi elle arrête la plupart des hackers.'
     },
     content: {
-      en: `## What is Two-Factor Authentication?
+      en: `## Why Passwords Alone Aren't Enough
 
-**Two-Factor Authentication (2FA)** adds a second layer of security beyond your password. Even if someone steals your password, they can't access your account without the second factor.
+Even with a strong password, your account can still be compromised:
 
-## The Three Types of Authentication Factors
+- **Phishing attacks** trick you into entering your password on a fake site
+- **Data breaches** expose passwords from company databases
+- **Keyloggers** record what you type
+- **Shoulder surfing** in public places
 
-1. **Something you know**: Password, PIN
-2. **Something you have**: Phone, hardware key
-3. **Something you are**: Fingerprint, face recognition
+### The Sobering Reality
 
-2FA combines two of these factors for enhanced security.
+Once someone has your password, they have full access to your account. They can read your emails, steal your money, impersonate you—all without you knowing until it's too late.
 
-## Types of 2FA Methods
+## How Two-Factor Authentication Works
 
-### 1. SMS Codes (Least Secure)
+2FA adds a second layer of security. Even if someone steals your password, they can't access your account without the second factor.
 
-A code sent to your phone via text message.
+### The Three Types of Authentication Factors
 
-⚠️ **Not Recommended**: Vulnerable to SIM swapping attacks.
+1. **Something you know** → Password, PIN
+2. **Something you have** → Phone, security key
+3. **Something you are** → Fingerprint, face
 
-### 2. Authenticator Apps (Recommended)
+2FA combines two of these. Usually: password (know) + phone code (have).
 
-Apps that generate time-based codes (TOTP):
+### How TOTP Codes Work
 
-- **Aegis Authenticator** (Android, Open Source)
-- **2FAS** (iOS/Android, Open Source)
-- **Google Authenticator**
-- **Microsoft Authenticator**
+When you set up 2FA with an authenticator app, here's what happens:
 
-### 3. Hardware Security Keys (Most Secure)
+1. **The website generates a secret key** → A long random string
+2. **You scan a QR code** → This transfers the secret to your authenticator app
+3. **Time-based algorithm** → Both your app and the website use the same formula
+4. **New code every 30 seconds** → Derived from the secret + current time
 
-Physical devices like:
+This is why the codes change constantly and why they only work for a short window.
 
-- **YubiKey** (Most popular)
-- **Nitrokey** (Open Source)
-- **Google Titan Key**
+## Why SMS 2FA Is Risky
 
-## Our Recommendations
+SMS codes are better than nothing, but they're vulnerable to:
 
-### For Authenticator Apps: Aegis or 2FAS
+### SIM Swapping Attacks
+1. Attacker gathers info about you (from social media, data breaches)
+2. Calls your mobile carrier, impersonates you
+3. Convinces them to transfer your number to their SIM
+4. Now they receive YOUR text messages
 
-Both are **open source** and offer:
+This isn't theoretical—it happens regularly to high-profile targets.
 
-- Encrypted backups
-- Biometric unlock
-- Clean, simple interface
-- No cloud sync (your codes stay on your device)
+### Better Alternatives
 
-### For Hardware Keys: YubiKey
+- **Authenticator apps** → Codes stay on your device
+- **Hardware security keys** → Physical device required
+- **Passkeys** → The newest, most secure option
 
-YubiKey offers:
+## Hardware Security Keys
 
-- Phishing-resistant authentication
-- Works with hundreds of services
-- Durable and waterproof
-- No batteries required
+A hardware key (like YubiKey) is a physical device you plug into your computer or tap on your phone.
 
-## Setting Up 2FA
+### Why They're the Most Secure
 
-1. Go to your account's security settings
-2. Look for "Two-Factor Authentication" or "2FA"
-3. Choose your method (authenticator app recommended)
-4. Scan the QR code with your authenticator
-5. **Save your backup codes** securely
-6. Verify with a test code
+- **Phishing-resistant** → The key verifies you're on the real website
+- **Can't be remotely stolen** → Attacker needs physical access
+- **Simple to use** → Just touch the key when prompted
 
-## Essential Accounts to Protect
+### How They Stop Phishing
 
-Priority accounts for 2FA:
+Even if you're tricked into visiting a fake bank website:
+- You enter your password (attacker captures it)
+- You plug in your security key
+- The key checks the website's domain → It's fake!
+- The key refuses to authenticate
 
-1. Email (gateway to all other accounts)
-2. Password manager
-3. Banking and financial services
-4. Social media
-5. Cloud storage
+The attacker has your password but can't use it.
 
-## Backup Strategy
+## Setting Up 2FA Properly
 
-**Critical**: What happens if you lose your phone?
+### Priority Accounts
 
-1. Save backup codes in your password manager
-2. Set up 2FA on multiple devices if possible
-3. Consider a hardware key as backup
-4. Some apps allow encrypted cloud backup
+Enable 2FA on these first:
+1. **Email** → Gateway to resetting all other passwords
+2. **Password manager** → Contains all your credentials
+3. **Banking** → Direct financial access
+4. **Social media** → Identity theft risk
 
-## Conclusion
+### Backup Your Recovery Codes
 
-2FA is one of the most effective ways to protect your accounts. Start with an authenticator app, and consider upgrading to hardware keys for your most critical accounts.`,
-      fr: `## Qu'est-ce que l'Authentification à Deux Facteurs ?
+When you enable 2FA, you'll receive backup codes. These let you access your account if you lose your phone.
 
-L'**Authentification à Deux Facteurs (2FA)** ajoute une seconde couche de sécurité au-delà de votre mot de passe. Même si quelqu'un vole votre mot de passe, il ne peut pas accéder à votre compte sans le second facteur.
+**Store them**:
+- In your password manager
+- Printed in a safe deposit box
+- NOT in email or cloud storage (defeats the purpose)
 
-## Les Trois Types de Facteurs d'Authentification
+## Common Mistakes to Avoid
 
-1. **Quelque chose que vous savez** : Mot de passe, PIN
-2. **Quelque chose que vous avez** : Téléphone, clé matérielle
-3. **Quelque chose que vous êtes** : Empreinte digitale, reconnaissance faciale
-
-La 2FA combine deux de ces facteurs pour une sécurité renforcée.
-
-## Types de Méthodes 2FA
-
-### 1. Codes SMS (Moins Sécurisé)
-
-Un code envoyé sur votre téléphone par SMS.
-
-⚠️ **Non Recommandé** : Vulnérable aux attaques de SIM swapping.
-
-### 2. Applications d'Authentification (Recommandé)
-
-Applications qui génèrent des codes temporels (TOTP) :
-
-- **Aegis Authenticator** (Android, Open Source)
-- **2FAS** (iOS/Android, Open Source)
-- **Google Authenticator**
-- **Microsoft Authenticator**
-
-### 3. Clés de Sécurité Matérielles (Plus Sécurisé)
-
-Dispositifs physiques comme :
-
-- **YubiKey** (Le plus populaire)
-- **Nitrokey** (Open Source)
-- **Google Titan Key**
-
-## Nos Recommandations
-
-### Pour les Apps d'Authentification : Aegis ou 2FAS
-
-Les deux sont **open source** et offrent :
-
-- Sauvegardes chiffrées
-- Déverrouillage biométrique
-- Interface simple et propre
-- Pas de synchronisation cloud (vos codes restent sur votre appareil)
-
-### Pour les Clés Matérielles : YubiKey
-
-YubiKey offre :
-
-- Authentification résistante au phishing
-- Compatible avec des centaines de services
-- Durable et étanche
-- Pas de batterie requise
-
-## Configurer la 2FA
-
-1. Allez dans les paramètres de sécurité de votre compte
-2. Cherchez "Authentification à Deux Facteurs" ou "2FA"
-3. Choisissez votre méthode (app d'authentification recommandée)
-4. Scannez le QR code avec votre authentificateur
-5. **Sauvegardez vos codes de secours** en sécurité
-6. Vérifiez avec un code test
-
-## Comptes Essentiels à Protéger
-
-Comptes prioritaires pour la 2FA :
-
-1. Email (passerelle vers tous les autres comptes)
-2. Gestionnaire de mots de passe
-3. Services bancaires et financiers
-4. Réseaux sociaux
-5. Stockage cloud
-
-## Stratégie de Sauvegarde
-
-**Critique** : Que se passe-t-il si vous perdez votre téléphone ?
-
-1. Sauvez les codes de secours dans votre gestionnaire de mots de passe
-2. Configurez la 2FA sur plusieurs appareils si possible
-3. Considérez une clé matérielle comme backup
-4. Certaines apps permettent une sauvegarde cloud chiffrée
+1. **Using SMS as your only 2FA method** → Use an app instead
+2. **Not saving backup codes** → You'll lose access if your phone dies
+3. **Disabling 2FA because it's inconvenient** → The few seconds are worth it
+4. **Using 2FA only on "important" accounts** → Attackers target any account
 
 ## Conclusion
 
-La 2FA est l'un des moyens les plus efficaces de protéger vos comptes. Commencez avec une app d'authentification, et envisagez de passer aux clés matérielles pour vos comptes les plus critiques.`
+Two-factor authentication is one of the most effective ways to protect your accounts. A password can be stolen, but stealing your phone AND knowing your password is much harder. Start with an authenticator app, and consider hardware keys for your most important accounts.`,
+      fr: `## Pourquoi les Mots de Passe Seuls Ne Suffisent Pas
+
+Même avec un mot de passe fort, votre compte peut être compromis :
+
+- **Les attaques de phishing** vous trompent pour entrer votre mot de passe sur un faux site
+- **Les fuites de données** exposent les mots de passe des bases de données d'entreprises
+- **Les keyloggers** enregistrent ce que vous tapez
+- **Le "shoulder surfing"** dans les lieux publics
+
+### La Réalité Préoccupante
+
+Une fois que quelqu'un a votre mot de passe, il a un accès complet à votre compte. Il peut lire vos emails, voler votre argent, usurper votre identité—tout cela sans que vous le sachiez jusqu'à ce qu'il soit trop tard.
+
+## Comment Fonctionne l'Authentification à Deux Facteurs
+
+La 2FA ajoute une seconde couche de sécurité. Même si quelqu'un vole votre mot de passe, il ne peut pas accéder à votre compte sans le second facteur.
+
+### Les Trois Types de Facteurs d'Authentification
+
+1. **Quelque chose que vous savez** → Mot de passe, PIN
+2. **Quelque chose que vous avez** → Téléphone, clé de sécurité
+3. **Quelque chose que vous êtes** → Empreinte digitale, visage
+
+La 2FA combine deux de ces éléments. Généralement : mot de passe (savoir) + code téléphone (avoir).
+
+### Comment Fonctionnent les Codes TOTP
+
+Quand vous configurez la 2FA avec une app d'authentification, voici ce qui se passe :
+
+1. **Le site génère une clé secrète** → Une longue chaîne aléatoire
+2. **Vous scannez un QR code** → Cela transfère le secret à votre app
+3. **Algorithme basé sur le temps** → Votre app et le site utilisent la même formule
+4. **Nouveau code toutes les 30 secondes** → Dérivé du secret + heure actuelle
+
+C'est pourquoi les codes changent constamment et ne fonctionnent que pendant une courte fenêtre.
+
+## Pourquoi la 2FA par SMS Est Risquée
+
+Les codes SMS sont mieux que rien, mais ils sont vulnérables à :
+
+### Attaques de SIM Swapping
+1. L'attaquant collecte des infos sur vous (réseaux sociaux, fuites de données)
+2. Appelle votre opérateur mobile, se fait passer pour vous
+3. Les convainc de transférer votre numéro vers leur SIM
+4. Maintenant ILS reçoivent VOS SMS
+
+Ce n'est pas théorique—ça arrive régulièrement aux cibles de haut profil.
+
+### Meilleures Alternatives
+
+- **Apps d'authentification** → Les codes restent sur votre appareil
+- **Clés de sécurité matérielles** → Appareil physique requis
+- **Passkeys** → L'option la plus récente et la plus sécurisée
+
+## Clés de Sécurité Matérielles
+
+Une clé matérielle (comme YubiKey) est un appareil physique que vous branchez sur votre ordinateur ou tapez sur votre téléphone.
+
+### Pourquoi Elles Sont les Plus Sécurisées
+
+- **Résistantes au phishing** → La clé vérifie que vous êtes sur le vrai site
+- **Ne peuvent pas être volées à distance** → L'attaquant a besoin d'un accès physique
+- **Simples à utiliser** → Touchez juste la clé quand demandé
+
+### Comment Elles Arrêtent le Phishing
+
+Même si vous êtes trompé et visitez un faux site bancaire :
+- Vous entrez votre mot de passe (l'attaquant le capture)
+- Vous branchez votre clé de sécurité
+- La clé vérifie le domaine du site → C'est faux !
+- La clé refuse de s'authentifier
+
+L'attaquant a votre mot de passe mais ne peut pas l'utiliser.
+
+## Configurer la 2FA Correctement
+
+### Comptes Prioritaires
+
+Activez la 2FA sur ceux-ci en premier :
+1. **Email** → Passerelle pour réinitialiser tous les autres mots de passe
+2. **Gestionnaire de mots de passe** → Contient tous vos identifiants
+3. **Banque** → Accès financier direct
+4. **Réseaux sociaux** → Risque d'usurpation d'identité
+
+### Sauvegardez Vos Codes de Récupération
+
+Quand vous activez la 2FA, vous recevrez des codes de secours. Ils permettent d'accéder à votre compte si vous perdez votre téléphone.
+
+**Stockez-les** :
+- Dans votre gestionnaire de mots de passe
+- Imprimés dans un coffre-fort
+- PAS dans les emails ou le cloud (ça annule l'intérêt)
+
+## Erreurs Courantes à Éviter
+
+1. **Utiliser SMS comme seule méthode 2FA** → Utilisez une app
+2. **Ne pas sauvegarder les codes de secours** → Vous perdrez l'accès si votre téléphone meurt
+3. **Désactiver la 2FA car c'est gênant** → Les quelques secondes en valent la peine
+4. **Utiliser la 2FA seulement sur les comptes "importants"** → Les attaquants ciblent tous les comptes
+
+## Conclusion
+
+L'authentification à deux facteurs est l'un des moyens les plus efficaces de protéger vos comptes. Un mot de passe peut être volé, mais voler votre téléphone ET connaître votre mot de passe est beaucoup plus difficile. Commencez avec une app d'authentification, et envisagez les clés matérielles pour vos comptes les plus importants.`
     },
     references: [
-      { title: 'Aegis Authenticator', url: 'https://getaegis.app/' },
-      { title: '2FAS Authenticator', url: 'https://2fas.com/' },
-      { title: 'YubiKey Official Site', url: 'https://www.yubico.com/' },
-      { title: 'NIST Guidelines on Authentication', url: 'https://pages.nist.gov/800-63-3/sp800-63b.html' }
+      { title: 'How TOTP Works', url: 'https://www.twilio.com/docs/glossary/totp' },
+      { title: 'NIST Authentication Guidelines', url: 'https://pages.nist.gov/800-63-3/sp800-63b.html' },
+      { title: 'FIDO Alliance - Passkeys', url: 'https://fidoalliance.org/passkeys/' },
+      { title: 'YubiKey - How It Works', url: 'https://www.yubico.com/why-yubico/how-the-yubikey-works/' }
     ]
   },
 
-  'social-media-privacy': {
+  'disk-encryption-veracrypt': {
     title: {
-      en: 'Social Media Privacy Settings',
-      fr: 'Paramètres de Confidentialité Réseaux Sociaux'
+      en: 'Disk Encryption: Protecting Your Files with VeraCrypt',
+      fr: 'Chiffrement de Disque : Protéger Vos Fichiers avec VeraCrypt'
     },
     excerpt: {
-      en: 'Take control of what you share online with these essential settings.',
-      fr: 'Prenez le contrôle de ce que vous partagez en ligne avec ces paramètres essentiels.'
+      en: 'Learn how full-disk encryption keeps your data safe if your device is stolen.',
+      fr: 'Découvrez comment le chiffrement de disque protège vos données en cas de vol.'
     },
     content: {
-      en: `## The Privacy Problem with Social Media
+      en: `## What Happens If Your Laptop Is Stolen?
 
-Social media platforms collect vast amounts of data about you:
+Imagine you leave your laptop in a café for just a minute. When you return, it's gone. Inside that laptop:
 
-- Your location history
-- Your browsing habits
-- Your contacts and relationships
-- Your interests and political views
-- Your purchasing behavior
+- Personal photos and documents
+- Saved passwords in your browser
+- Tax returns and financial documents
+- Work files and emails
+- Access to all your logged-in accounts
 
-This data is used for targeted advertising and can be shared with third parties.
+### Without Encryption
 
-## Platform-Specific Privacy Settings
+A thief can simply:
+1. Remove the hard drive
+2. Plug it into another computer
+3. Access ALL your files—no password needed
 
-### Facebook/Meta
+Your Windows/Mac login password? It only protects the login screen. The actual data on the disk is completely unprotected.
 
-1. **Go to Settings > Privacy**
-2. Set "Who can see your posts" to "Friends"
-3. Disable "Face recognition"
-4. Review app permissions
-5. Download your data to see what they have
+## How Full-Disk Encryption Works
 
-**Important**: Use Facebook Container extension in Firefox to isolate tracking.
+Full-disk encryption (FDE) encrypts every single file on your drive. Without the decryption key, the data looks like random noise.
 
-### Instagram
+### The Process
 
-1. Switch to a private account
-2. Disable activity status
-3. Control who can tag you
-4. Review story sharing settings
-5. Disable "Similar Account Suggestions"
+1. **At boot** → You enter your encryption password
+2. **The key is derived** → Your password unlocks the encryption key
+3. **Transparent operation** → Files are decrypted on-the-fly as you use them
+4. **When powered off** → Everything on disk is encrypted gibberish
 
-### Twitter/X
+### What a Thief Sees
 
-1. Protect your tweets (private account)
-2. Disable "Discoverability" settings
-3. Turn off personalized ads
-4. Disable location tagging
-5. Review connected apps
+With FDE enabled, if someone steals your powered-off laptop:
+- They cannot access any files
+- They cannot boot into the operating system
+- Even removing the hard drive is useless
+- The data is mathematically unrecoverable without your password
 
-### LinkedIn
+## Built-in Encryption Options
 
-1. Control your public profile visibility
-2. Disable "Profile viewing options"
-3. Turn off activity broadcasts
-4. Limit data sharing with partners
-5. Review app permissions
+### Windows: BitLocker
+- Available on Windows Pro/Enterprise
+- Integrates with TPM chip for convenience
+- Automatic encryption
 
-## General Best Practices
+### macOS: FileVault
+- Built into all Macs
+- Uses your login password
+- Very easy to enable
 
-### Information to Never Share
+### Linux: LUKS
+- Standard for Linux distributions
+- Often configured during installation
 
-- Home address
-- Phone number
-- Vacation plans (burglary risk)
-- Children's school names
-- Financial information
-- Work complaints
+## Why Use VeraCrypt?
 
-### Think Before You Post
+VeraCrypt is a free, open-source encryption tool that offers advantages:
 
-Ask yourself:
+### Benefits
 
-1. Would I show this to my employer?
-2. Would I show this to my family?
-3. Does this reveal my location?
-4. Could this be used against me?
+1. **Cross-platform** → Works on Windows, Mac, and Linux
+2. **Open source** → Code is publicly auditable
+3. **Plausible deniability** → Hidden volumes for sensitive situations
+4. **Strong algorithms** → AES, Serpent, Twofish (or combinations)
+5. **No backdoors** → Unlike some commercial solutions
 
-## Privacy-Focused Alternatives
+### Use Cases
 
-Consider these alternatives:
+- **Full disk encryption** → Protect your entire drive
+- **Encrypted containers** → Create encrypted "file safes"
+- **Portable volumes** → Encrypted USB drives
+- **Hidden volumes** → Decoy + hidden volume for plausible deniability
 
-- **Mastodon** instead of Twitter
-- **Signal** instead of Facebook Messenger
-- **Pixelfed** instead of Instagram
+## Setting Up VeraCrypt: A Basic Walkthrough
 
-## Browser Extensions for Protection
+### For an Encrypted Container
 
-- **uBlock Origin**: Block trackers and ads
-- **Privacy Badger**: Learn and block trackers
-- **Facebook Container**: Isolate Facebook tracking
+1. **Download VeraCrypt** from veracrypt.fr (official site)
+2. **Create Volume** → Click "Create Volume"
+3. **Choose container** → "Create an encrypted file container"
+4. **Standard volume** → For most users
+5. **Select location** → Where to save the container file
+6. **Choose encryption** → AES is fast and secure
+7. **Set size** → How much space you need
+8. **Create password** → Use a strong passphrase
+9. **Format** → Move your mouse randomly for entropy
+10. **Mount** → The container appears as a virtual drive
 
-## Conclusion
+### Daily Usage
 
-You don't have to delete social media, but you should control it. Take 30 minutes to review your privacy settings on every platform you use.`,
-      fr: `## Le Problème de Confidentialité avec les Réseaux Sociaux
+- Mount the container when you need access
+- Drag files into/out of the mounted volume
+- Dismount when finished (crucial if leaving your computer)
 
-Les plateformes de réseaux sociaux collectent d'énormes quantités de données sur vous :
+## Security Best Practices
 
-- Votre historique de localisation
-- Vos habitudes de navigation
-- Vos contacts et relations
-- Vos intérêts et opinions politiques
-- Votre comportement d'achat
+### Password Strength
 
-Ces données sont utilisées pour la publicité ciblée et peuvent être partagées avec des tiers.
+Your encryption is only as strong as your password:
+- Use a long passphrase (20+ characters)
+- Don't reuse passwords from online accounts
+- Consider: if you forget it, your data is GONE
 
-## Paramètres de Confidentialité par Plateforme
+### Physical Security
 
-### Facebook/Meta
+Encryption protects powered-off devices. But:
+- A running, unlocked laptop is fully accessible
+- Always lock your screen when stepping away
+- Consider automatic locking after brief inactivity
 
-1. **Allez dans Paramètres > Confidentialité**
-2. Définissez "Qui peut voir vos publications" sur "Amis"
-3. Désactivez "Reconnaissance faciale"
-4. Vérifiez les autorisations des applications
-5. Téléchargez vos données pour voir ce qu'ils ont
+### Backup Considerations
 
-**Important** : Utilisez l'extension Facebook Container sur Firefox pour isoler le pistage.
+Encrypted data is still data—you need backups:
+- Backup the encrypted container/volume
+- Store backups in a different location
+- Remember: if you lose the password, backups are useless too
 
-### Instagram
+## Common Misconceptions
 
-1. Passez en compte privé
-2. Désactivez le statut d'activité
-3. Contrôlez qui peut vous identifier
-4. Vérifiez les paramètres de partage des stories
-5. Désactivez "Suggestions de comptes similaires"
+### "Encryption slows down my computer"
+Modern CPUs have hardware acceleration for AES. You likely won't notice any slowdown.
 
-### Twitter/X
+### "I have nothing to hide"
+It's not about hiding. It's about:
+- Protecting financial information
+- Preventing identity theft
+- Keeping personal photos private
+- Securing work documents
 
-1. Protégez vos tweets (compte privé)
-2. Désactivez les paramètres de "Découverte"
-3. Désactivez les publicités personnalisées
-4. Désactivez le marquage de localisation
-5. Vérifiez les applications connectées
-
-### LinkedIn
-
-1. Contrôlez la visibilité de votre profil public
-2. Désactivez les "Options de consultation du profil"
-3. Désactivez les diffusions d'activité
-4. Limitez le partage de données avec les partenaires
-5. Vérifiez les autorisations des applications
-
-## Bonnes Pratiques Générales
-
-### Informations à Ne Jamais Partager
-
-- Adresse personnelle
-- Numéro de téléphone
-- Plans de vacances (risque de cambriolage)
-- Noms des écoles des enfants
-- Informations financières
-- Plaintes sur le travail
-
-### Réfléchissez Avant de Publier
-
-Demandez-vous :
-
-1. Montrerais-je ceci à mon employeur ?
-2. Montrerais-je ceci à ma famille ?
-3. Cela révèle-t-il ma localisation ?
-4. Cela pourrait-il être utilisé contre moi ?
-
-## Alternatives Respectueuses de la Vie Privée
-
-Considérez ces alternatives :
-
-- **Mastodon** au lieu de Twitter
-- **Signal** au lieu de Facebook Messenger
-- **Pixelfed** au lieu d'Instagram
-
-## Extensions Navigateur pour la Protection
-
-- **uBlock Origin** : Bloque les traqueurs et publicités
-- **Privacy Badger** : Apprend et bloque les traqueurs
-- **Facebook Container** : Isole le pistage Facebook
+### "The government can crack any encryption"
+With a strong password and proper implementation:
+- AES-256 is considered unbreakable
+- Even with massive computing power
+- The math is in your favor
 
 ## Conclusion
 
-Vous n'avez pas à supprimer les réseaux sociaux, mais vous devez les contrôler. Prenez 30 minutes pour revoir vos paramètres de confidentialité sur chaque plateforme que vous utilisez.`
+Disk encryption is essential if you use a laptop or external drives. If your device is lost or stolen, encryption is the difference between a minor inconvenience and a catastrophic privacy breach. Whether you use built-in options or VeraCrypt, enable full-disk encryption today.`,
+      fr: `## Que Se Passe-t-il Si Votre Laptop Est Volé ?
+
+Imaginez que vous laissez votre laptop dans un café juste une minute. Quand vous revenez, il a disparu. À l'intérieur de ce laptop :
+
+- Photos et documents personnels
+- Mots de passe enregistrés dans votre navigateur
+- Déclarations d'impôts et documents financiers
+- Fichiers de travail et emails
+- Accès à tous vos comptes connectés
+
+### Sans Chiffrement
+
+Un voleur peut simplement :
+1. Retirer le disque dur
+2. Le brancher sur un autre ordinateur
+3. Accéder à TOUS vos fichiers—sans mot de passe
+
+Votre mot de passe de connexion Windows/Mac ? Il protège seulement l'écran de connexion. Les données réelles sur le disque sont complètement non protégées.
+
+## Comment Fonctionne le Chiffrement de Disque Complet
+
+Le chiffrement de disque complet (FDE) chiffre chaque fichier sur votre disque. Sans la clé de déchiffrement, les données ressemblent à du bruit aléatoire.
+
+### Le Processus
+
+1. **Au démarrage** → Vous entrez votre mot de passe de chiffrement
+2. **La clé est dérivée** → Votre mot de passe déverrouille la clé de chiffrement
+3. **Opération transparente** → Les fichiers sont déchiffrés à la volée
+4. **Quand éteint** → Tout sur le disque est du charabia chiffré
+
+### Ce Que Voit un Voleur
+
+Avec FDE activé, si quelqu'un vole votre laptop éteint :
+- Il ne peut accéder à aucun fichier
+- Il ne peut pas démarrer le système d'exploitation
+- Même retirer le disque dur est inutile
+- Les données sont mathématiquement irrécupérables sans votre mot de passe
+
+## Options de Chiffrement Intégrées
+
+### Windows : BitLocker
+- Disponible sur Windows Pro/Enterprise
+- S'intègre avec la puce TPM pour la commodité
+- Chiffrement automatique
+
+### macOS : FileVault
+- Intégré à tous les Mac
+- Utilise votre mot de passe de connexion
+- Très facile à activer
+
+### Linux : LUKS
+- Standard pour les distributions Linux
+- Souvent configuré lors de l'installation
+
+## Pourquoi Utiliser VeraCrypt ?
+
+VeraCrypt est un outil de chiffrement gratuit et open-source qui offre des avantages :
+
+### Bénéfices
+
+1. **Multi-plateforme** → Fonctionne sur Windows, Mac et Linux
+2. **Open source** → Le code est auditable publiquement
+3. **Déni plausible** → Volumes cachés pour situations sensibles
+4. **Algorithmes forts** → AES, Serpent, Twofish (ou combinaisons)
+5. **Pas de backdoors** → Contrairement à certaines solutions commerciales
+
+### Cas d'Usage
+
+- **Chiffrement de disque complet** → Protéger tout votre disque
+- **Conteneurs chiffrés** → Créer des "coffres-forts" de fichiers chiffrés
+- **Volumes portables** → Clés USB chiffrées
+- **Volumes cachés** → Leurre + volume caché pour déni plausible
+
+## Configurer VeraCrypt : Guide Basique
+
+### Pour un Conteneur Chiffré
+
+1. **Téléchargez VeraCrypt** depuis veracrypt.fr (site officiel)
+2. **Créer un Volume** → Cliquez sur "Créer un Volume"
+3. **Choisissez conteneur** → "Créer un fichier conteneur chiffré"
+4. **Volume standard** → Pour la plupart des utilisateurs
+5. **Sélectionnez l'emplacement** → Où sauvegarder le fichier conteneur
+6. **Choisissez le chiffrement** → AES est rapide et sécurisé
+7. **Définissez la taille** → L'espace dont vous avez besoin
+8. **Créez le mot de passe** → Utilisez une phrase secrète forte
+9. **Formatez** → Bougez votre souris aléatoirement pour l'entropie
+10. **Montez** → Le conteneur apparaît comme un disque virtuel
+
+### Usage Quotidien
+
+- Montez le conteneur quand vous avez besoin d'accéder
+- Glissez les fichiers dans/hors du volume monté
+- Démontez quand terminé (crucial si vous quittez votre ordinateur)
+
+## Bonnes Pratiques de Sécurité
+
+### Force du Mot de Passe
+
+Votre chiffrement n'est aussi fort que votre mot de passe :
+- Utilisez une longue phrase secrète (20+ caractères)
+- Ne réutilisez pas de mots de passe de comptes en ligne
+- Considérez : si vous l'oubliez, vos données sont PERDUES
+
+### Sécurité Physique
+
+Le chiffrement protège les appareils éteints. Mais :
+- Un laptop allumé et déverrouillé est totalement accessible
+- Verrouillez toujours votre écran quand vous vous éloignez
+- Considérez le verrouillage automatique après brève inactivité
+
+### Considérations de Sauvegarde
+
+Les données chiffrées restent des données—vous avez besoin de sauvegardes :
+- Sauvegardez le conteneur/volume chiffré
+- Stockez les sauvegardes dans un endroit différent
+- Rappelez-vous : si vous perdez le mot de passe, les sauvegardes sont aussi inutiles
+
+## Idées Reçues Courantes
+
+### "Le chiffrement ralentit mon ordinateur"
+Les CPU modernes ont une accélération matérielle pour AES. Vous ne remarquerez probablement aucun ralentissement.
+
+### "Je n'ai rien à cacher"
+Ce n'est pas une question de cacher. C'est une question de :
+- Protéger les informations financières
+- Prévenir le vol d'identité
+- Garder les photos personnelles privées
+- Sécuriser les documents de travail
+
+### "Le gouvernement peut craquer tout chiffrement"
+Avec un mot de passe fort et une implémentation correcte :
+- AES-256 est considéré comme incassable
+- Même avec une puissance de calcul massive
+- Les mathématiques sont de votre côté
+
+## Conclusion
+
+Le chiffrement de disque est essentiel si vous utilisez un laptop ou des disques externes. Si votre appareil est perdu ou volé, le chiffrement fait la différence entre un inconvénient mineur et une violation catastrophique de vie privée. Que vous utilisiez les options intégrées ou VeraCrypt, activez le chiffrement de disque complet dès aujourd'hui.`
     },
     references: [
-      { title: 'EFF: Privacy on Social Networks', url: 'https://ssd.eff.org/module/protecting-yourself-social-networks' },
-      { title: 'Mozilla Facebook Container', url: 'https://www.mozilla.org/firefox/facebookcontainer/' },
-      { title: 'Privacy Guides - Social Networks', url: 'https://www.privacyguides.org/social-networks/' },
-      { title: 'Mastodon - Decentralized Social', url: 'https://joinmastodon.org/' }
+      { title: 'VeraCrypt Official Site', url: 'https://www.veracrypt.fr/' },
+      { title: 'EFF: How to Encrypt Your Hard Drive', url: 'https://ssd.eff.org/module/how-encrypt-your-windows-device' },
+      { title: 'How AES Encryption Works', url: 'https://www.cloudflare.com/learning/ssl/what-is-encryption/' },
+      { title: 'Apple FileVault Guide', url: 'https://support.apple.com/guide/mac-help/protect-data-on-your-mac-with-filevault-mh11785/mac' }
     ]
   },
 
@@ -716,200 +882,294 @@ Vous n'avez pas à supprimer les réseaux sociaux, mais vous devez les contrôle
     content: {
       en: `## What is Phishing?
 
-**Phishing** is a social engineering attack where criminals impersonate legitimate organizations to steal your:
+Phishing is a social engineering attack where criminals impersonate legitimate organizations to steal:
 
 - Login credentials
 - Credit card numbers
 - Personal information
 - Access to your accounts
 
-## Red Flags to Watch For
+### Why It Works
 
-### 1. Sender Address
+Phishing exploits human psychology:
+- **Fear**: "Your account will be suspended!"
+- **Urgency**: "Act within 24 hours!"
+- **Authority**: Pretending to be your bank or boss
+- **Curiosity**: "See who viewed your profile"
 
-- Check the actual email address, not just the display name
-- Look for misspellings: "amaz0n.com" vs "amazon.com"
-- Beware of lookalike domains: "amazon-security.com"
+## Anatomy of a Phishing Email
 
-### 2. Urgency and Fear Tactics
+### The Sender Address
 
-Phishing emails often claim:
+This is your first clue. Always check the ACTUAL email address, not just the display name.
 
-- "Your account will be suspended!"
-- "Unusual activity detected!"
-- "Act within 24 hours!"
-- "You've won a prize!"
+**Example**:
+- Display name: "Amazon Support"
+- Actual address: support@amaz0n-security.com ❌
 
-### 3. Generic Greetings
+**Red flags**:
+- Misspellings (amaz0n, paypa1)
+- Wrong domain (amazon-support.com instead of amazon.com)
+- Free email providers (amazon.support@gmail.com)
+
+### The Greeting
 
 Legitimate companies usually know your name:
-
 - ❌ "Dear Customer"
 - ❌ "Dear User"
+- ❌ "Dear Amazon Member"
 - ✅ "Dear John Smith"
 
-### 4. Suspicious Links
+### Urgency and Threats
 
-**Always hover before clicking!**
+Phishing emails create panic:
+- "Your account will be locked in 24 hours"
+- "Unauthorized access detected"
+- "Confirm your identity immediately"
+- "Your payment was declined"
 
-- Check where the link actually goes
-- Look for HTTPS (though scammers use it too)
-- When in doubt, go directly to the website
+Legitimate companies rarely threaten you via email.
 
-### 5. Attachments
+### The Link
 
-Never open unexpected attachments, especially:
+**ALWAYS hover before clicking!**
 
-- .exe, .zip, .js files
-- "Invoice" or "Receipt" from unknown senders
-- Documents asking you to "Enable Macros"
+What you see: [Click here to verify](underlined text)
+What it actually links to: http://amazonsecure-verify.malicious-site.com
 
-## Real Examples
+### Grammar and Spelling
+
+While some phishing is well-written, many contain:
+- Obvious spelling errors
+- Awkward grammar
+- Unusual phrasing
+
+## Real-World Examples
 
 ### The "Bank Alert" Scam
 
-> "Your Bank of America account has been locked. Click here to verify your identity."
+> Subject: Urgent: Your Account Has Been Locked
+>
+> Dear Valued Customer,
+>
+> We have detected unusual activity on your account. Click here immediately to verify your identity or your account will be suspended.
+>
+> [Verify Now]
+>
+> Bank of America Security Team
 
 **Red flags**:
+- Generic greeting
+- Urgency and threats
+- Suspicious link
+- Bank of America doesn't send these
+
+### The "Package Delivery" Scam
+
+> Subject: Your package could not be delivered
+>
+> We attempted to deliver your package but you were not home. Click below to reschedule delivery.
+>
+> [Reschedule Delivery]
+>
+> UPS Delivery Team
+
+**Red flags**:
+- You weren't expecting a package
 - Generic sender address
-- Urgency tactics
-- Link goes to fake site
+- Link goes to suspicious domain
 
-### The "Tech Support" Scam
+## How to Verify Suspicious Emails
 
-> "Microsoft has detected a virus on your computer. Call this number immediately."
+1. **Don't click any links** in the email
+2. **Go directly to the website** by typing the URL yourself
+3. **Call the company** using the number from their official website
+4. **Check your account** by logging in normally
+5. **Search online** for the exact email subject—often others have reported it
 
-**Red flags**:
-- Microsoft doesn't send these emails
-- Phone number leads to scammers
-- Fear tactics
+## What to Do If You've Been Phished
 
-## What to Do If You Suspect Phishing
+### Immediate Steps
 
-1. **Don't click any links**
-2. **Don't download attachments**
-3. **Report the email** (most email providers have a report button)
-4. **Go directly to the real website** if you're concerned
-5. **Contact the company** through official channels
-
-## If You've Been Phished
-
-1. **Change your password immediately**
+1. **Change your password** on the affected account
 2. **Enable 2FA** if not already active
-3. **Check for unauthorized activity**
-4. **Report to the affected service**
-5. **Monitor your accounts** for suspicious activity
+3. **Check for unauthorized activity** (orders, transfers, messages)
+4. **Report it** to the impersonated company
 
-## Tools for Protection
+### If You Entered Financial Information
 
-- **Email clients**: Use Gmail, Outlook, or ProtonMail (good spam filters)
-- **Browser**: Chrome and Firefox warn about known phishing sites
-- **Password manager**: Won't auto-fill on fake sites
+1. **Contact your bank immediately**
+2. **Monitor your accounts** for suspicious activity
+3. **Consider a credit freeze** if you shared personal details
+4. **File a report** with your country's fraud agency
+
+## Protecting Yourself
+
+### Technical Defenses
+
+- **Password manager** → Won't auto-fill on fake sites
+- **2FA** → Stops attackers even if they get your password
+- **Spam filters** → Use Gmail, Outlook, or ProtonMail
+- **Security keys** → Physically verify you're on the real site
+
+### Behavioral Defenses
+
+- **Pause before clicking** → Especially with urgent requests
+- **Verify independently** → Contact companies through official channels
+- **Be skeptical** → If it seems too good or too urgent, it probably is
+- **Stay informed** → Phishing tactics evolve constantly
 
 ## Conclusion
 
-Phishing attacks are becoming increasingly sophisticated. Stay vigilant, verify senders, and never click links in suspicious emails. When in doubt, go directly to the website.`,
+Phishing attacks are becoming increasingly sophisticated. AI can now generate perfect grammar and personalized content. Your best defense is a healthy skepticism: verify senders, hover over links, and when in doubt, go directly to the source.`,
       fr: `## Qu'est-ce que le Phishing ?
 
-Le **Phishing** (hameçonnage) est une attaque d'ingénierie sociale où des criminels se font passer pour des organisations légitimes pour voler vos :
+Le phishing est une attaque d'ingénierie sociale où des criminels usurpent l'identité d'organisations légitimes pour voler :
 
 - Identifiants de connexion
 - Numéros de carte bancaire
 - Informations personnelles
 - Accès à vos comptes
 
-## Signaux d'Alerte à Surveiller
+### Pourquoi Ça Fonctionne
 
-### 1. Adresse de l'Expéditeur
+Le phishing exploite la psychologie humaine :
+- **Peur** : "Votre compte sera suspendu !"
+- **Urgence** : "Agissez dans les 24 heures !"
+- **Autorité** : Se faire passer pour votre banque ou patron
+- **Curiosité** : "Voyez qui a consulté votre profil"
 
-- Vérifiez l'adresse email réelle, pas seulement le nom affiché
-- Cherchez les fautes : "amaz0n.com" vs "amazon.com"
-- Méfiez-vous des domaines similaires : "amazon-security.com"
+## Anatomie d'un Email de Phishing
 
-### 2. Urgence et Tactiques de Peur
+### L'Adresse de l'Expéditeur
 
-Les emails de phishing prétendent souvent :
+C'est votre premier indice. Vérifiez toujours l'adresse email RÉELLE, pas seulement le nom affiché.
 
-- "Votre compte sera suspendu !"
-- "Activité inhabituelle détectée !"
-- "Agissez dans les 24 heures !"
-- "Vous avez gagné un prix !"
+**Exemple** :
+- Nom affiché : "Support Amazon"
+- Adresse réelle : support@amaz0n-security.com ❌
 
-### 3. Salutations Génériques
+**Signaux d'alerte** :
+- Fautes d'orthographe (amaz0n, paypa1)
+- Mauvais domaine (amazon-support.com au lieu de amazon.com)
+- Fournisseurs d'email gratuits (amazon.support@gmail.com)
+
+### La Salutation
 
 Les entreprises légitimes connaissent généralement votre nom :
-
 - ❌ "Cher Client"
 - ❌ "Cher Utilisateur"
+- ❌ "Cher Membre Amazon"
 - ✅ "Cher Jean Dupont"
 
-### 4. Liens Suspects
+### Urgence et Menaces
 
-**Survolez toujours avant de cliquer !**
+Les emails de phishing créent la panique :
+- "Votre compte sera bloqué dans 24 heures"
+- "Accès non autorisé détecté"
+- "Confirmez votre identité immédiatement"
+- "Votre paiement a été refusé"
 
-- Vérifiez où le lien mène réellement
-- Cherchez le HTTPS (bien que les escrocs l'utilisent aussi)
-- En cas de doute, allez directement sur le site
+Les entreprises légitimes vous menacent rarement par email.
 
-### 5. Pièces Jointes
+### Le Lien
 
-N'ouvrez jamais de pièces jointes inattendues, surtout :
+**Survolez TOUJOURS avant de cliquer !**
 
-- Fichiers .exe, .zip, .js
-- "Facture" ou "Reçu" d'expéditeurs inconnus
-- Documents demandant d'"Activer les Macros"
+Ce que vous voyez : [Cliquez ici pour vérifier](texte souligné)
+Où ça mène vraiment : http://amazonsecure-verify.site-malveillant.com
 
-## Exemples Réels
+### Grammaire et Orthographe
+
+Bien que certains phishing soient bien écrits, beaucoup contiennent :
+- Fautes d'orthographe évidentes
+- Grammaire maladroite
+- Formulations inhabituelles
+
+## Exemples Concrets
 
 ### L'Arnaque "Alerte Bancaire"
 
-> "Votre compte Société Générale a été bloqué. Cliquez ici pour vérifier votre identité."
+> Objet : Urgent : Votre Compte a Été Bloqué
+>
+> Cher Client,
+>
+> Nous avons détecté une activité inhabituelle sur votre compte. Cliquez ici immédiatement pour vérifier votre identité ou votre compte sera suspendu.
+>
+> [Vérifier Maintenant]
+>
+> Équipe Sécurité Société Générale
 
 **Signaux d'alerte** :
+- Salutation générique
+- Urgence et menaces
+- Lien suspect
+- La Société Générale n'envoie pas ces emails
+
+### L'Arnaque "Livraison de Colis"
+
+> Objet : Votre colis n'a pas pu être livré
+>
+> Nous avons tenté de livrer votre colis mais vous étiez absent. Cliquez ci-dessous pour reprogrammer la livraison.
+>
+> [Reprogrammer la Livraison]
+>
+> Équipe Livraison Colissimo
+
+**Signaux d'alerte** :
+- Vous n'attendiez pas de colis
 - Adresse d'expéditeur générique
-- Tactiques d'urgence
-- Le lien mène à un faux site
+- Le lien mène à un domaine suspect
 
-### L'Arnaque "Support Technique"
+## Comment Vérifier les Emails Suspects
 
-> "Microsoft a détecté un virus sur votre ordinateur. Appelez ce numéro immédiatement."
+1. **Ne cliquez sur aucun lien** dans l'email
+2. **Allez directement sur le site** en tapant l'URL vous-même
+3. **Appelez l'entreprise** avec le numéro de leur site officiel
+4. **Vérifiez votre compte** en vous connectant normalement
+5. **Recherchez en ligne** l'objet exact de l'email—souvent d'autres l'ont signalé
 
-**Signaux d'alerte** :
-- Microsoft n'envoie pas ces emails
-- Le numéro mène à des escrocs
-- Tactiques de peur
+## Que Faire Si Vous Avez Été Victime
 
-## Que Faire si Vous Suspectez du Phishing
+### Étapes Immédiates
 
-1. **Ne cliquez sur aucun lien**
-2. **Ne téléchargez pas les pièces jointes**
-3. **Signalez l'email** (la plupart des fournisseurs ont un bouton de signalement)
-4. **Allez directement sur le vrai site** si vous êtes inquiet
-5. **Contactez l'entreprise** via les canaux officiels
-
-## Si Vous Avez Été Victime
-
-1. **Changez votre mot de passe immédiatement**
+1. **Changez votre mot de passe** sur le compte affecté
 2. **Activez la 2FA** si pas déjà active
-3. **Vérifiez les activités non autorisées**
-4. **Signalez au service concerné**
-5. **Surveillez vos comptes** pour toute activité suspecte
+3. **Vérifiez les activités non autorisées** (commandes, virements, messages)
+4. **Signalez-le** à l'entreprise usurpée
 
-## Outils de Protection
+### Si Vous Avez Entré des Informations Financières
 
-- **Clients email** : Utilisez Gmail, Outlook, ou ProtonMail (bons filtres anti-spam)
-- **Navigateur** : Chrome et Firefox avertissent des sites de phishing connus
-- **Gestionnaire de mots de passe** : Ne remplit pas automatiquement sur les faux sites
+1. **Contactez votre banque immédiatement**
+2. **Surveillez vos comptes** pour toute activité suspecte
+3. **Considérez un gel de crédit** si vous avez partagé des détails personnels
+4. **Faites un signalement** à l'agence anti-fraude de votre pays
+
+## Se Protéger
+
+### Défenses Techniques
+
+- **Gestionnaire de mots de passe** → Ne remplit pas automatiquement sur les faux sites
+- **2FA** → Arrête les attaquants même s'ils ont votre mot de passe
+- **Filtres anti-spam** → Utilisez Gmail, Outlook, ou ProtonMail
+- **Clés de sécurité** → Vérifient physiquement que vous êtes sur le vrai site
+
+### Défenses Comportementales
+
+- **Pause avant de cliquer** → Surtout avec les demandes urgentes
+- **Vérifiez indépendamment** → Contactez les entreprises via les canaux officiels
+- **Soyez sceptique** → Si ça semble trop beau ou trop urgent, c'est probablement le cas
+- **Restez informé** → Les tactiques de phishing évoluent constamment
 
 ## Conclusion
 
-Les attaques de phishing deviennent de plus en plus sophistiquées. Restez vigilant, vérifiez les expéditeurs, et ne cliquez jamais sur les liens dans les emails suspects. En cas de doute, allez directement sur le site web.`
+Les attaques de phishing deviennent de plus en plus sophistiquées. L'IA peut maintenant générer une grammaire parfaite et du contenu personnalisé. Votre meilleure défense est un scepticisme sain : vérifiez les expéditeurs, survolez les liens, et en cas de doute, allez directement à la source.`
     },
     references: [
       { title: 'Google Phishing Quiz', url: 'https://phishingquiz.withgoogle.com/' },
       { title: 'CISA - Avoid Phishing', url: 'https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks' },
-      { title: 'Anti-Phishing Working Group', url: 'https://apwg.org/' },
-      { title: 'Signal Spam (France)', url: 'https://www.signal-spam.fr/' }
+      { title: 'Signal Spam (France)', url: 'https://www.signal-spam.fr/' },
+      { title: 'EFF: Phishing', url: 'https://ssd.eff.org/glossary/phishing' }
     ]
   },
 
@@ -925,7 +1185,15 @@ Les attaques de phishing deviennent de plus en plus sophistiquées. Restez vigil
     content: {
       en: `## What is GDPR?
 
-The **General Data Protection Regulation (GDPR)** is a European Union law that gives you control over your personal data. It applies to any organization that handles data of EU residents.
+The **General Data Protection Regulation (GDPR)** is a European Union law that gives you control over your personal data. It applies to any organization that handles data of EU residents, regardless of where that organization is based.
+
+### Why It Matters
+
+Before GDPR, companies could collect and use your data with little oversight. Now:
+- You have the right to know what data is collected
+- You can request it be deleted
+- Companies must explain why they need your data
+- Violations can result in massive fines
 
 ## Your Rights Under GDPR
 
@@ -933,45 +1201,67 @@ The **General Data Protection Regulation (GDPR)** is a European Union law that g
 
 You can request a copy of all personal data a company holds about you.
 
+**What you'll receive**:
+- All data they have on you
+- Why they're processing it
+- Who they've shared it with
+- How long they'll keep it
+
 **How to exercise it**:
 - Send a "Subject Access Request" (SAR)
-- Companies must respond within 30 days
+- Company must respond within 30 days
 - The service is free
 
 ### 2. Right to Rectification (Article 16)
 
-You can request correction of inaccurate personal data.
+You can request correction of inaccurate personal data. If your address, name, or any other information is wrong, they must fix it.
 
 ### 3. Right to Erasure - "Right to be Forgotten" (Article 17)
 
 You can request deletion of your data when:
+- Data is no longer necessary for its original purpose
+- You withdraw your consent
+- Data was processed unlawfully
 
-- Data is no longer necessary
-- You withdraw consent
-- Data was unlawfully processed
-
-**Note**: Some exceptions apply (legal obligations, public interest)
+**Exceptions**: Companies can refuse if they need the data for legal obligations, public health, or legal claims.
 
 ### 4. Right to Data Portability (Article 20)
 
-You can receive your data in a machine-readable format and transfer it to another service.
+You can receive your data in a machine-readable format and transfer it to another service. This prevents vendor lock-in.
 
 ### 5. Right to Object (Article 21)
 
 You can object to:
-
-- Direct marketing
-- Processing based on legitimate interests
+- Direct marketing (they must stop immediately)
+- Processing based on "legitimate interests"
 - Automated decision-making and profiling
 
 ### 6. Right to Restrict Processing (Article 18)
 
-You can limit how your data is used while disputes are resolved.
+You can limit how your data is used while disputes are being resolved.
+
+## What Counts as Personal Data?
+
+GDPR defines personal data broadly:
+
+- Name, address, phone number
+- Email addresses
+- IP addresses
+- Location data
+- Online identifiers (cookies, device IDs)
+- Photos and videos
+- Financial information
+- Health data
+- Biometric data
+
+**Even pseudonymized data** can be personal data if it can be linked back to you.
 
 ## How to Make a GDPR Request
 
 ### Template for Access Request
 
+> Subject: Subject Access Request under GDPR Article 15
+>
 > Dear Data Protection Officer,
 >
 > Under Article 15 of the GDPR, I am requesting a copy of all personal data you hold about me.
@@ -986,60 +1276,69 @@ You can limit how your data is used while disputes are resolved.
 > Best regards,
 > [Your Name]
 
-## What Counts as Personal Data?
+### Template for Erasure Request
 
-GDPR defines personal data broadly:
-
-- Name, address, phone number
-- Email addresses
-- IP addresses
-- Location data
-- Online identifiers (cookies)
-- Photos and videos
-- Financial information
-- Health data
-- Biometric data
+> Subject: Erasure Request under GDPR Article 17
+>
+> Dear Data Protection Officer,
+>
+> Under Article 17 of the GDPR, I request the erasure of all personal data you hold about me.
+>
+> [State your reason: e.g., "I am withdrawing my consent" or "The data is no longer necessary for the purpose it was collected"]
+>
+> Please confirm deletion within 30 days.
+>
+> Best regards,
+> [Your Name]
 
 ## Company Obligations
 
 Companies must:
 
-1. Have a lawful basis for processing data
-2. Be transparent about data use
-3. Implement security measures
-4. Report data breaches within 72 hours
-5. Appoint a Data Protection Officer (if required)
-6. Conduct Data Protection Impact Assessments
+1. **Have a lawful basis** for processing data (consent, contract, legal obligation, etc.)
+2. **Be transparent** about what they collect and why
+3. **Implement security measures** to protect data
+4. **Report data breaches** within 72 hours
+5. **Appoint a Data Protection Officer** (for large organizations)
+6. **Conduct Data Protection Impact Assessments** for high-risk processing
 
 ## Penalties for Non-Compliance
 
 GDPR violations can result in fines up to:
-
 - **€20 million** or
 - **4% of global annual revenue** (whichever is higher)
 
-Major fines have been issued to:
-
-- Meta: €1.2 billion
-- Amazon: €746 million
-- Google: €90 million
+Major fines issued:
+- Meta: €1.2 billion (Ireland, 2023)
+- Amazon: €746 million (Luxembourg, 2021)
+- Google: €90 million (France, 2022)
 
 ## How to File a Complaint
 
 If a company violates your rights:
 
-1. Contact their Data Protection Officer
-2. File a complaint with your national Data Protection Authority
-3. In France: CNIL (cnil.fr)
-4. In Germany: State DPA offices
-5. In UK: ICO (ico.org.uk)
+1. **Contact their Data Protection Officer** first
+2. **File a complaint** with your national Data Protection Authority:
+   - France: CNIL (cnil.fr)
+   - Germany: State DPA offices
+   - UK: ICO (ico.org.uk)
+   - Spain: AEPD
+3. **Legal action** as a last resort
 
 ## Conclusion
 
-GDPR gives you powerful rights over your personal data. Don't hesitate to exercise them. Companies are legally obligated to respect your privacy.`,
+GDPR gives you powerful rights over your personal data. Companies are legally obligated to respect your privacy. Don't hesitate to exercise these rights—they exist specifically to protect you.`,
       fr: `## Qu'est-ce que le RGPD ?
 
-Le **Règlement Général sur la Protection des Données (RGPD)** est une loi de l'Union Européenne qui vous donne le contrôle sur vos données personnelles. Il s'applique à toute organisation qui traite des données de résidents de l'UE.
+Le **Règlement Général sur la Protection des Données (RGPD)** est une loi de l'Union Européenne qui vous donne le contrôle sur vos données personnelles. Il s'applique à toute organisation qui traite des données de résidents de l'UE, peu importe où cette organisation est basée.
+
+### Pourquoi C'est Important
+
+Avant le RGPD, les entreprises pouvaient collecter et utiliser vos données avec peu de surveillance. Maintenant :
+- Vous avez le droit de savoir quelles données sont collectées
+- Vous pouvez demander leur suppression
+- Les entreprises doivent expliquer pourquoi elles ont besoin de vos données
+- Les violations peuvent entraîner des amendes massives
 
 ## Vos Droits selon le RGPD
 
@@ -1047,116 +1346,139 @@ Le **Règlement Général sur la Protection des Données (RGPD)** est une loi de
 
 Vous pouvez demander une copie de toutes les données personnelles qu'une entreprise détient sur vous.
 
+**Ce que vous recevrez** :
+- Toutes les données qu'ils ont sur vous
+- Pourquoi ils les traitent
+- Avec qui ils les ont partagées
+- Combien de temps ils les garderont
+
 **Comment l'exercer** :
 - Envoyez une "Demande d'Accès"
-- Les entreprises doivent répondre sous 30 jours
+- L'entreprise doit répondre sous 30 jours
 - Le service est gratuit
 
 ### 2. Droit de Rectification (Article 16)
 
-Vous pouvez demander la correction de données personnelles inexactes.
+Vous pouvez demander la correction de données personnelles inexactes. Si votre adresse, nom ou toute autre information est fausse, ils doivent la corriger.
 
 ### 3. Droit à l'Effacement - "Droit à l'Oubli" (Article 17)
 
 Vous pouvez demander la suppression de vos données quand :
-
-- Les données ne sont plus nécessaires
+- Les données ne sont plus nécessaires pour leur objectif original
 - Vous retirez votre consentement
 - Les données ont été traitées illégalement
 
-**Note** : Certaines exceptions s'appliquent (obligations légales, intérêt public)
+**Exceptions** : Les entreprises peuvent refuser si elles ont besoin des données pour des obligations légales, la santé publique, ou des réclamations légales.
 
 ### 4. Droit à la Portabilité (Article 20)
 
-Vous pouvez recevoir vos données dans un format lisible par machine et les transférer à un autre service.
+Vous pouvez recevoir vos données dans un format lisible par machine et les transférer à un autre service. Cela empêche l'enfermement chez un fournisseur.
 
 ### 5. Droit d'Opposition (Article 21)
 
 Vous pouvez vous opposer à :
-
-- La prospection commerciale
-- Le traitement basé sur les intérêts légitimes
-- Les décisions automatisées et le profilage
+- Le marketing direct (ils doivent arrêter immédiatement)
+- Le traitement basé sur des "intérêts légitimes"
+- La prise de décision automatisée et le profilage
 
 ### 6. Droit à la Limitation du Traitement (Article 18)
 
-Vous pouvez limiter l'utilisation de vos données pendant la résolution de litiges.
-
-## Comment Faire une Demande RGPD
-
-### Modèle de Demande d'Accès
-
-> Madame, Monsieur le Délégué à la Protection des Données,
->
-> Conformément à l'article 15 du RGPD, je demande une copie de toutes les données personnelles que vous détenez sur moi.
->
-> Mes informations d'identification :
-> - Nom : [Votre Nom]
-> - Email : [Votre Email]
-> - Identifiant de compte : [Si applicable]
->
-> Veuillez répondre dans les 30 jours comme l'exige la loi.
->
-> Cordialement,
-> [Votre Nom]
+Vous pouvez limiter comment vos données sont utilisées pendant que des litiges sont résolus.
 
 ## Qu'est-ce qu'une Donnée Personnelle ?
 
-Le RGPD définit les données personnelles de manière large :
+Le RGPD définit les données personnelles largement :
 
 - Nom, adresse, numéro de téléphone
 - Adresses email
 - Adresses IP
 - Données de localisation
-- Identifiants en ligne (cookies)
+- Identifiants en ligne (cookies, IDs d'appareil)
 - Photos et vidéos
 - Informations financières
 - Données de santé
 - Données biométriques
 
+**Même les données pseudonymisées** peuvent être des données personnelles si elles peuvent être reliées à vous.
+
+## Comment Faire une Demande RGPD
+
+### Modèle de Demande d'Accès
+
+> Objet : Demande d'accès aux données personnelles (Article 15 RGPD)
+>
+> Madame, Monsieur le Délégué à la Protection des Données,
+>
+> Conformément à l'Article 15 du RGPD, je vous demande une copie de toutes les données personnelles que vous détenez sur moi.
+>
+> Mes informations d'identification :
+> - Nom : [Votre Nom]
+> - Email : [Votre Email]
+> - ID de Compte : [Si applicable]
+>
+> Veuillez répondre sous 30 jours comme requis par la loi.
+>
+> Cordialement,
+> [Votre Nom]
+
+### Modèle de Demande d'Effacement
+
+> Objet : Demande d'effacement des données personnelles (Article 17 RGPD)
+>
+> Madame, Monsieur le Délégué à la Protection des Données,
+>
+> Conformément à l'Article 17 du RGPD, je demande l'effacement de toutes les données personnelles que vous détenez sur moi.
+>
+> [Indiquez votre raison : ex. "Je retire mon consentement" ou "Les données ne sont plus nécessaires pour l'objectif pour lequel elles ont été collectées"]
+>
+> Veuillez confirmer la suppression sous 30 jours.
+>
+> Cordialement,
+> [Votre Nom]
+
 ## Obligations des Entreprises
 
 Les entreprises doivent :
 
-1. Avoir une base légale pour traiter les données
-2. Être transparentes sur l'utilisation des données
-3. Mettre en œuvre des mesures de sécurité
-4. Signaler les violations de données sous 72 heures
-5. Nommer un Délégué à la Protection des Données (si requis)
-6. Réaliser des Analyses d'Impact
+1. **Avoir une base légale** pour traiter les données (consentement, contrat, obligation légale, etc.)
+2. **Être transparentes** sur ce qu'elles collectent et pourquoi
+3. **Mettre en œuvre des mesures de sécurité** pour protéger les données
+4. **Signaler les violations de données** sous 72 heures
+5. **Nommer un Délégué à la Protection des Données** (pour les grandes organisations)
+6. **Réaliser des Analyses d'Impact** pour les traitements à haut risque
 
 ## Sanctions pour Non-Conformité
 
 Les violations du RGPD peuvent entraîner des amendes jusqu'à :
-
 - **20 millions d'euros** ou
-- **4% du chiffre d'affaires annuel mondial** (le montant le plus élevé)
+- **4% du chiffre d'affaires annuel mondial** (le plus élevé des deux)
 
-Des amendes majeures ont été infligées à :
+Amendes majeures prononcées :
+- Meta : 1,2 milliard d'euros (Irlande, 2023)
+- Amazon : 746 millions d'euros (Luxembourg, 2021)
+- Google : 90 millions d'euros (France, 2022)
 
-- Meta : 1,2 milliard d'euros
-- Amazon : 746 millions d'euros
-- Google : 90 millions d'euros
-
-## Comment Porter Plainte
+## Comment Déposer une Plainte
 
 Si une entreprise viole vos droits :
 
-1. Contactez leur Délégué à la Protection des Données
-2. Déposez une plainte auprès de votre autorité nationale
-3. En France : CNIL (cnil.fr)
-4. En Belgique : APD (autoriteprotectiondonnees.be)
-5. En Suisse : PFPDT (edoeb.admin.ch)
+1. **Contactez leur Délégué à la Protection des Données** d'abord
+2. **Déposez une plainte** auprès de votre Autorité de Protection des Données :
+   - France : CNIL (cnil.fr)
+   - Allemagne : Bureaux DPA des États
+   - Royaume-Uni : ICO (ico.org.uk)
+   - Espagne : AEPD
+3. **Action en justice** en dernier recours
 
 ## Conclusion
 
-Le RGPD vous donne des droits puissants sur vos données personnelles. N'hésitez pas à les exercer. Les entreprises sont légalement obligées de respecter votre vie privée.`
+Le RGPD vous donne des droits puissants sur vos données personnelles. Les entreprises sont légalement obligées de respecter votre vie privée. N'hésitez pas à exercer ces droits—ils existent spécifiquement pour vous protéger.`
     },
     references: [
       { title: 'GDPR Official Text', url: 'https://gdpr.eu/' },
-      { title: 'CNIL - French Data Authority', url: 'https://www.cnil.fr/' },
-      { title: 'Your Europe - Data Protection Rights', url: 'https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm' },
-      { title: 'GDPR Request Template Generator', url: 'https://datarequests.org/' }
+      { title: 'CNIL - Vos Droits', url: 'https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles' },
+      { title: 'ICO Guide to GDPR', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/' },
+      { title: 'European Commission GDPR', url: 'https://ec.europa.eu/info/law/law-topic/data-protection_en' }
     ]
   }
 };
