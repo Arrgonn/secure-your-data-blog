@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +9,10 @@ import { articleContents } from '@/data/articleContent';
 const Article = () => {
   const { slug } = useParams<{ slug: string }>();
   const { language, t } = useLanguage();
+  const location = useLocation();
+  
+  // Get language prefix from URL
+  const langPrefix = location.pathname.startsWith('/fr') ? '/fr' : '/en';
   
   const article = slug ? getArticleBySlug(slug) : undefined;
   const content = slug ? articleContents[slug] : undefined;
@@ -280,7 +284,7 @@ const Article = () => {
         <article className="container mx-auto px-4 max-w-4xl">
           {/* Back Link */}
           <Link 
-            to="/#articles" 
+            to={`${langPrefix}#articles`} 
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />

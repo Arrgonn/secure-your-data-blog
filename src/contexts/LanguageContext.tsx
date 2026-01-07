@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'en' | 'fr';
 
@@ -54,30 +54,65 @@ const translations: Translations = {
 
 interface LanguageContextType {
   language: Language;
+  setLanguage: (lang: Language) => void;
   toggleLanguage: () => void;
   t: (key: string) => string;
+  langPrefix: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('language') as Language;
-    return saved || 'en';
-  });
+  const [language, setLanguageState] = useState<Language>('en');
+
+  // Detect language from URL on initial load
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/fr')) {
+      setLanguageState('fr');
+    } else if (path.startsWith('/en')) {
+      setLanguageState('en');
+    } else {
+      // Fallback to localStorage or default
+      const saved = localStorage.getItem('language') as Language;
+      if (saved && (saved === 'en' || saved === 'fr')) {
+        setLanguageState(saved);
+      }
+    }
+  }, []);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem('language', lang);
+    
+    // Update URL to reflect language
+    const currentPath = window.location.pathname;
+    let newPath: string;
+    
+    if (currentPath.startsWith('/en')) {
+      newPath = currentPath.replace('/en', `/${lang}`);
+    } else if (currentPath.startsWith('/fr')) {
+      newPath = currentPath.replace('/fr', `/${lang}`);
+    } else {
+      newPath = `/${lang}${currentPath}`;
+    }
+    
+    window.location.href = newPath;
+  };
 
   const toggleLanguage = () => {
     const newLang = language === 'en' ? 'fr' : 'en';
     setLanguage(newLang);
-    localStorage.setItem('language', newLang);
   };
 
   const t = (key: string): string => {
     return translations[key]?.[language] || key;
   };
 
+  const langPrefix = `/${language}`;
+
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t, langPrefix }}>
       {children}
     </LanguageContext.Provider>
   );

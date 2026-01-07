@@ -78,6 +78,18 @@ A VPN is not a magic privacy shield:
 - **Your VPN provider** could theoretically see your traffic (hence why no-log matters)
 - **Performance may decrease** due to encryption overhead
 
+## Our Recommendation
+
+If you're looking for a VPN that truly respects your privacy, we recommend **Mullvad VPN**. Here's why:
+
+- **Strict no-log policy** — independently audited
+- **Anonymous signup** — no email or personal info required
+- **Accept cash payments** — for complete anonymity
+- **Open source** — transparent and auditable code
+- **Fixed pricing** — €5/month, no upsells or tricks
+
+Mullvad has consistently proven its commitment to privacy and has been recommended by privacy organizations worldwide.
+
 ## Conclusion
 
 A VPN is an essential tool for protecting your data on untrusted networks. It encrypts your connection, hides your IP address, and prevents eavesdropping. However, it's one piece of the privacy puzzle—not a complete solution.`,

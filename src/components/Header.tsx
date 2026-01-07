@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
-  const { language, toggleLanguage, t } = useLanguage();
+  const { language, toggleLanguage, t, langPrefix } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = ['home', 'articles', 'about', 'contact'];
@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href={langPrefix} className="flex items-center gap-2 group">
             <Shield className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
             <span className="text-xl font-bold text-foreground">
               how<span className="text-primary">protect</span>mydata
