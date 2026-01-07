@@ -1,43 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English Pages -->
   <url>
-    <loc>https://howprotectmydata.com/</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://howprotectmydata.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr"/>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://howprotectmydata.com/article/vpn-how-it-works</loc>
+    <loc>https://howprotectmydata.com/en/article/vpn-how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/vpn-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/vpn-how-it-works"/>
     <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://howprotectmydata.com/article/password-security-encryption</loc>
+    <loc>https://howprotectmydata.com/en/article/password-security-encryption</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/password-security-encryption"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/password-security-encryption"/>
     <lastmod>2025-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://howprotectmydata.com/article/two-factor-authentication</loc>
+    <loc>https://howprotectmydata.com/en/article/two-factor-authentication</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/two-factor-authentication"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/two-factor-authentication"/>
     <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://howprotectmydata.com/article/disk-encryption-veracrypt</loc>
+    <loc>https://howprotectmydata.com/en/article/disk-encryption-veracrypt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/disk-encryption-veracrypt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/disk-encryption-veracrypt"/>
     <lastmod>2025-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://howprotectmydata.com/article/phishing-spot-fake-emails</loc>
+    <loc>https://howprotectmydata.com/en/article/phishing-spot-fake-emails</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/phishing-spot-fake-emails"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/phishing-spot-fake-emails"/>
     <lastmod>2025-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://howprotectmydata.com/article/gdpr-know-your-rights</loc>
+    <loc>https://howprotectmydata.com/en/article/gdpr-know-your-rights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/gdpr-know-your-rights"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/gdpr-know-your-rights"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- French Pages -->
+  <url>
+    <loc>https://howprotectmydata.com/fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr"/>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/vpn-how-it-works</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/vpn-how-it-works"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/vpn-how-it-works"/>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/password-security-encryption</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/password-security-encryption"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/password-security-encryption"/>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/two-factor-authentication</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/two-factor-authentication"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/two-factor-authentication"/>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/disk-encryption-veracrypt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/disk-encryption-veracrypt"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/disk-encryption-veracrypt"/>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/phishing-spot-fake-emails</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/phishing-spot-fake-emails"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/phishing-spot-fake-emails"/>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/gdpr-know-your-rights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/gdpr-know-your-rights"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/gdpr-know-your-rights"/>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

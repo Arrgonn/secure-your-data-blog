@@ -15,13 +15,14 @@ const categoryColors: Record<string, string> = {
   'VPN': 'bg-blue-500/10 text-blue-500 border-blue-500/20',
   'Security': 'bg-green-500/10 text-green-500 border-green-500/20',
   'Authentication': 'bg-purple-500/10 text-purple-500 border-purple-500/20',
+  'Encryption': 'bg-teal-500/10 text-teal-500 border-teal-500/20',
   'Privacy': 'bg-orange-500/10 text-orange-500 border-orange-500/20',
   'Phishing': 'bg-red-500/10 text-red-500 border-red-500/20',
   'Legal': 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20',
 };
 
 const ArticleCard = ({ id, slug, category, readTime, date }: ArticleCardProps) => {
-  const { language, t } = useLanguage();
+  const { language, t, langPrefix } = useLanguage();
   const content = articleContents[slug];
   
   return (
@@ -63,7 +64,7 @@ const ArticleCard = ({ id, slug, category, readTime, date }: ArticleCardProps) =
 
         {/* Read More Link */}
         <Link
-          to={`/article/${slug}`}
+          to={`${langPrefix}/article/${slug}`}
           className="inline-flex items-center gap-2 text-primary font-semibold group/link"
         >
           {t('articles.readMore')}
