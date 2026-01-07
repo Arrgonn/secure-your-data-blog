@@ -1,4 +1,5 @@
 import { Moon, Sun, Globe, Shield, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState } from 'react';
@@ -7,6 +8,21 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage, t, langPrefix } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Check if we're on the home page
+  const isHomePage = location.pathname === '/en' || location.pathname === '/fr' || location.pathname === '/';
+
+  const getNavHref = (link: string) => {
+    if (link === 'home') {
+      return langPrefix;
+    }
+    // For articles, about, contact - navigate to home page with anchor
+    if (isHomePage) {
+      return `#${link}`;
+    }
+    return `${langPrefix}#${link}`;
+  };
 
   const navLinks = ['home', 'articles', 'about', 'contact'];
 
@@ -15,24 +31,39 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href={langPrefix} className="flex items-center gap-2 group">
+          <Link to={langPrefix} className="flex items-center gap-2 group">
             <Shield className="w-8 h-8 text-primary transition-transform group-hover:scale-110" />
             <span className="text-xl font-bold text-foreground">
               how<span className="text-primary">protect</span>mydata
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link}`}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
-                {t(`nav.${link}`)}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const href = getNavHref(link);
+              // Use Link for full navigation, anchor for same-page scroll
+              if (href.startsWith('#')) {
+                return (
+                  <a
+                    key={link}
+                    href={href}
+                    className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {t(`nav.${link}`)}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={link}
+                  to={href}
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {t(`nav.${link}`)}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Controls */}
@@ -80,16 +111,31 @@ const Header = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link}`}
-                className="block py-3 text-muted-foreground hover:text-primary transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {t(`nav.${link}`)}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const href = getNavHref(link);
+              if (href.startsWith('#')) {
+                return (
+                  <a
+                    key={link}
+                    href={href}
+                    className="block py-3 text-muted-foreground hover:text-primary transition-colors font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t(`nav.${link}`)}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={link}
+                  to={href}
+                  className="block py-3 text-muted-foreground hover:text-primary transition-colors font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {t(`nav.${link}`)}
+                </Link>
+              );
+            })}
           </nav>
         )}
       </div>
