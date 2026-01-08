@@ -6,7 +6,7 @@
     <loc>https://howprotectmydata.com/en</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr"/>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -58,13 +58,29 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://howprotectmydata.com/en/article/private-browsing-public-computer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/private-browsing-public-computer"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/private-browsing-public-computer"/>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/en/article/secure-messaging-apps</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/secure-messaging-apps"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/secure-messaging-apps"/>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   
   <!-- French Pages -->
   <url>
     <loc>https://howprotectmydata.com/fr</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr"/>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -113,6 +129,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/gdpr-know-your-rights"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/gdpr-know-your-rights"/>
     <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/private-browsing-public-computer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/private-browsing-public-computer"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/private-browsing-public-computer"/>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://howprotectmydata.com/fr/article/secure-messaging-apps</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://howprotectmydata.com/en/article/secure-messaging-apps"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://howprotectmydata.com/fr/article/secure-messaging-apps"/>
+    <lastmod>2026-01-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

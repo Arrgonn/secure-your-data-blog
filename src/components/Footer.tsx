@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Shield, Github, Twitter, Linkedin } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -21,17 +21,6 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6">
               {t('footer.description')}
             </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
-                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </a>
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
-                <Github className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </a>
-              <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors">
-                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}

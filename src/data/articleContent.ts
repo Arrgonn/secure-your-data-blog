@@ -1492,5 +1492,325 @@ Le RGPD vous donne des droits puissants sur vos données personnelles. Les entre
       { title: 'ICO Guide to GDPR', url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/' },
       { title: 'European Commission GDPR', url: 'https://ec.europa.eu/info/law/law-topic/data-protection_en' }
     ]
+  },
+
+  'private-browsing-public-computer': {
+    title: {
+      en: 'How to Use a Public Computer Safely',
+      fr: 'Comment utiliser un ordinateur public en toute sécurité'
+    },
+    excerpt: {
+      en: 'Learn how to protect your data when using shared or public computers.',
+      fr: 'Apprenez à protéger vos données sur un ordinateur partagé ou public.'
+    },
+    content: {
+      en: `## Why Public Computers Are Risky
+
+You're at a library, hotel business center, or internet café. You need to quickly check your email or log into an account. But that computer has been used by dozens of people before you—and will be used by dozens more after.
+
+Here's what could go wrong:
+- **Saved passwords**: Previous users might have saved their credentials, and yours could be saved too
+- **Keyloggers**: Malicious software could record every keystroke you type
+- **Browser history**: Your activity could remain visible to the next user
+- **Session hijacking**: If you forget to log out, someone else could access your accounts
+
+### A Real Example
+
+Imagine checking your bank account at a hotel computer. You finish, close the browser, and walk away. But you didn't log out properly. The next guest opens the browser, hits "back," and suddenly they're in your banking session.
+
+## How to Protect Yourself
+
+### 1. Always Use Private/Incognito Mode
+
+Every modern browser has a private browsing mode:
+- **Chrome**: Ctrl+Shift+N (or Cmd+Shift+N on Mac)
+- **Firefox**: Ctrl+Shift+P
+- **Edge**: Ctrl+Shift+N
+- **Safari**: Cmd+Shift+N
+
+Private mode ensures:
+- No cookies saved after you close the window
+- No browsing history recorded
+- No auto-fill suggestions from your session
+
+### 2. Check for Keyloggers
+
+Before typing any sensitive information:
+- Look at the keyboard—any unusual devices attached?
+- Check the USB ports for suspicious devices
+- If possible, use an on-screen keyboard for passwords
+
+### 3. Always Log Out Manually
+
+Never just close the browser. Always:
+1. Click "Log Out" or "Sign Out" on every site
+2. Clear the browser history and cookies manually
+3. Close all browser windows
+
+### 4. Avoid Sensitive Activities
+
+On public computers, avoid:
+- Online banking
+- Shopping with credit cards
+- Accessing highly sensitive accounts
+
+If you must access something important, change your password afterwards from a trusted device.
+
+### 5. Use Two-Factor Authentication
+
+Even if someone captures your password:
+- They can't log in without the second factor
+- You'll get an alert about the login attempt
+- You can deny access from your phone
+
+## Quick Checklist Before Leaving
+
+- [ ] Logged out of all accounts
+- [ ] Closed all browser windows
+- [ ] Cleared browsing history (Ctrl+Shift+Delete)
+- [ ] Checked that no downloads remain
+- [ ] Removed any USB devices you plugged in
+
+## Conclusion
+
+Public computers are convenient but risky. By using private browsing, logging out properly, and avoiding sensitive tasks, you can significantly reduce the chances of your data being compromised.`,
+      fr: `## Pourquoi les ordinateurs publics sont risqués
+
+Vous êtes dans une bibliothèque, un centre d'affaires d'hôtel ou un cybercafé. Vous devez rapidement vérifier vos emails ou vous connecter à un compte. Mais cet ordinateur a été utilisé par des dizaines de personnes avant vous—et sera utilisé par des dizaines d'autres après.
+
+Voici ce qui pourrait mal tourner :
+- **Mots de passe enregistrés** : Les utilisateurs précédents ont peut-être sauvegardé leurs identifiants, et les vôtres pourraient l'être aussi
+- **Keyloggers** : Un logiciel malveillant pourrait enregistrer chaque touche que vous tapez
+- **Historique de navigation** : Votre activité pourrait rester visible pour l'utilisateur suivant
+- **Détournement de session** : Si vous oubliez de vous déconnecter, quelqu'un d'autre pourrait accéder à vos comptes
+
+### Un exemple concret
+
+Imaginez consulter votre compte bancaire sur un ordinateur d'hôtel. Vous finissez, fermez le navigateur et partez. Mais vous ne vous êtes pas déconnecté correctement. Le prochain client ouvre le navigateur, appuie sur "retour", et soudain il est dans votre session bancaire.
+
+## Comment vous protéger
+
+### 1. Utilisez toujours le mode navigation privée
+
+Chaque navigateur moderne a un mode de navigation privée :
+- **Chrome** : Ctrl+Maj+N (ou Cmd+Maj+N sur Mac)
+- **Firefox** : Ctrl+Maj+P
+- **Edge** : Ctrl+Maj+N
+- **Safari** : Cmd+Maj+N
+
+Le mode privé garantit :
+- Aucun cookie sauvegardé après la fermeture de la fenêtre
+- Aucun historique de navigation enregistré
+- Aucune suggestion de remplissage automatique de votre session
+
+### 2. Vérifiez les keyloggers
+
+Avant de taper des informations sensibles :
+- Regardez le clavier—y a-t-il des dispositifs inhabituels attachés ?
+- Vérifiez les ports USB pour des appareils suspects
+- Si possible, utilisez un clavier virtuel pour les mots de passe
+
+### 3. Déconnectez-vous toujours manuellement
+
+Ne fermez jamais simplement le navigateur. Toujours :
+1. Cliquez sur "Déconnexion" sur chaque site
+2. Effacez l'historique et les cookies manuellement
+3. Fermez toutes les fenêtres du navigateur
+
+### 4. Évitez les activités sensibles
+
+Sur les ordinateurs publics, évitez :
+- Les opérations bancaires en ligne
+- Les achats avec carte de crédit
+- L'accès aux comptes très sensibles
+
+Si vous devez accéder à quelque chose d'important, changez votre mot de passe ensuite depuis un appareil de confiance.
+
+### 5. Utilisez l'authentification à deux facteurs
+
+Même si quelqu'un capture votre mot de passe :
+- Il ne peut pas se connecter sans le second facteur
+- Vous recevrez une alerte sur la tentative de connexion
+- Vous pouvez refuser l'accès depuis votre téléphone
+
+## Liste de contrôle avant de partir
+
+- [ ] Déconnecté de tous les comptes
+- [ ] Fermé toutes les fenêtres du navigateur
+- [ ] Effacé l'historique de navigation (Ctrl+Maj+Suppr)
+- [ ] Vérifié qu'aucun téléchargement ne reste
+- [ ] Retiré tous les périphériques USB que vous avez branchés
+
+## Conclusion
+
+Les ordinateurs publics sont pratiques mais risqués. En utilisant la navigation privée, en vous déconnectant correctement et en évitant les tâches sensibles, vous pouvez réduire considérablement les risques de compromission de vos données.`
+    },
+    references: [
+      { title: 'US-CERT: Using Caution with USB Drives', url: 'https://www.cisa.gov/news-events/news/using-caution-usb-drives' },
+      { title: 'Google: Browse in private', url: 'https://support.google.com/chrome/answer/95464' },
+      { title: 'Mozilla: Private Browsing', url: 'https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history' }
+    ]
+  },
+
+  'secure-messaging-apps': {
+    title: {
+      en: 'Secure Messaging: How End-to-End Encryption Works',
+      fr: 'Messagerie sécurisée : Comment fonctionne le chiffrement de bout en bout'
+    },
+    excerpt: {
+      en: 'Understand how encrypted messaging apps protect your conversations.',
+      fr: 'Comprenez comment les applications de messagerie chiffrées protègent vos conversations.'
+    },
+    content: {
+      en: `## Your Messages Are More Exposed Than You Think
+
+When you send a regular SMS or use certain messaging apps, your messages travel through servers that can read them. Phone carriers, app companies, and potentially hackers can access your conversations.
+
+### What's at stake?
+- Private conversations with family and friends
+- Sensitive business discussions
+- Personal photos and videos
+- Location information
+- Financial details shared in messages
+
+## What Is End-to-End Encryption?
+
+End-to-end encryption (E2EE) means that **only you and the recipient can read the message**. Not even the company running the app can see what you're saying.
+
+### How It Works - A Simple Analogy
+
+Imagine you want to send a secret letter:
+
+1. **Without encryption**: You write a postcard. Anyone who handles it can read it—the postal worker, the sorting facility, your neighbor if it's misdelivered.
+
+2. **With encryption**: You put your message in a box with a special lock. Only the recipient has the matching key. Anyone who intercepts the box sees... a locked box.
+
+### The Technical Version (Simplified)
+
+1. **Key generation**: Each user has a public key (shareable) and a private key (secret)
+2. **Sending**: Your app encrypts the message with the recipient's public key
+3. **Transit**: The encrypted blob travels through servers—unreadable to everyone
+4. **Receiving**: The recipient's app decrypts it with their private key
+
+## Which Apps Use Real End-to-End Encryption?
+
+### ✅ Signal
+- Open-source and independently audited
+- Encryption on by default
+- Minimal data collection
+- Recommended by privacy experts worldwide
+
+### ✅ WhatsApp
+- Uses Signal's encryption protocol
+- End-to-end encrypted by default
+- Note: Meta (Facebook) collects metadata (who you talk to, when, how often)
+
+### ⚠️ Telegram
+- Encryption is NOT on by default
+- Only "Secret Chats" are end-to-end encrypted
+- Regular chats are encrypted in transit but stored on servers
+
+### ❌ Regular SMS
+- No encryption
+- Carriers can read and store messages
+- Easily intercepted
+
+## What Encryption Doesn't Protect
+
+Even with E2EE, be aware:
+- **Screenshots**: Recipients can screenshot conversations
+- **Device access**: If someone has your unlocked phone, they can read everything
+- **Metadata**: Some apps still collect who you talk to and when
+- **Backups**: Cloud backups may not be encrypted
+
+## How to Maximize Your Security
+
+1. **Use Signal or WhatsApp** for sensitive conversations
+2. **Enable disappearing messages** for extra privacy
+3. **Verify safety numbers** with important contacts
+4. **Lock your phone** with a strong PIN or biometrics
+5. **Disable cloud backups** for messaging apps, or use encrypted backups
+
+## Conclusion
+
+End-to-end encryption is one of the most powerful tools for protecting your privacy. By choosing apps that implement it correctly and understanding its limitations, you can have truly private conversations in a digital world.`,
+      fr: `## Vos messages sont plus exposés que vous ne le pensez
+
+Quand vous envoyez un SMS classique ou utilisez certaines applications de messagerie, vos messages transitent par des serveurs qui peuvent les lire. Les opérateurs téléphoniques, les entreprises d'applications et potentiellement les pirates peuvent accéder à vos conversations.
+
+### Qu'est-ce qui est en jeu ?
+- Conversations privées avec famille et amis
+- Discussions professionnelles sensibles
+- Photos et vidéos personnelles
+- Informations de localisation
+- Détails financiers partagés dans les messages
+
+## Qu'est-ce que le chiffrement de bout en bout ?
+
+Le chiffrement de bout en bout (E2EE) signifie que **seuls vous et le destinataire pouvez lire le message**. Même l'entreprise qui gère l'application ne peut pas voir ce que vous dites.
+
+### Comment ça marche - Une analogie simple
+
+Imaginez que vous voulez envoyer une lettre secrète :
+
+1. **Sans chiffrement** : Vous écrivez une carte postale. Quiconque la manipule peut la lire—le facteur, le centre de tri, votre voisin si elle est mal livrée.
+
+2. **Avec chiffrement** : Vous mettez votre message dans une boîte avec un cadenas spécial. Seul le destinataire a la clé correspondante. Quiconque intercepte la boîte voit... une boîte verrouillée.
+
+### La version technique (simplifiée)
+
+1. **Génération de clés** : Chaque utilisateur a une clé publique (partageable) et une clé privée (secrète)
+2. **Envoi** : Votre application chiffre le message avec la clé publique du destinataire
+3. **Transit** : Le blob chiffré voyage à travers les serveurs—illisible pour tous
+4. **Réception** : L'application du destinataire le déchiffre avec sa clé privée
+
+## Quelles applications utilisent vraiment le chiffrement de bout en bout ?
+
+### ✅ Signal
+- Open-source et audité de manière indépendante
+- Chiffrement activé par défaut
+- Collecte de données minimale
+- Recommandé par les experts en confidentialité du monde entier
+
+### ✅ WhatsApp
+- Utilise le protocole de chiffrement de Signal
+- Chiffrement de bout en bout par défaut
+- Note : Meta (Facebook) collecte les métadonnées (à qui vous parlez, quand, à quelle fréquence)
+
+### ⚠️ Telegram
+- Le chiffrement n'est PAS activé par défaut
+- Seules les "Conversations secrètes" sont chiffrées de bout en bout
+- Les chats normaux sont chiffrés en transit mais stockés sur les serveurs
+
+### ❌ SMS classiques
+- Pas de chiffrement
+- Les opérateurs peuvent lire et stocker les messages
+- Facilement interceptables
+
+## Ce que le chiffrement ne protège pas
+
+Même avec E2EE, soyez conscient :
+- **Captures d'écran** : Les destinataires peuvent capturer les conversations
+- **Accès à l'appareil** : Si quelqu'un a votre téléphone déverrouillé, il peut tout lire
+- **Métadonnées** : Certaines applications collectent toujours à qui vous parlez et quand
+- **Sauvegardes** : Les sauvegardes cloud peuvent ne pas être chiffrées
+
+## Comment maximiser votre sécurité
+
+1. **Utilisez Signal ou WhatsApp** pour les conversations sensibles
+2. **Activez les messages éphémères** pour plus de confidentialité
+3. **Vérifiez les numéros de sécurité** avec vos contacts importants
+4. **Verrouillez votre téléphone** avec un code PIN fort ou la biométrie
+5. **Désactivez les sauvegardes cloud** pour les apps de messagerie, ou utilisez des sauvegardes chiffrées
+
+## Conclusion
+
+Le chiffrement de bout en bout est l'un des outils les plus puissants pour protéger votre vie privée. En choisissant des applications qui l'implémentent correctement et en comprenant ses limites, vous pouvez avoir des conversations véritablement privées dans un monde numérique.`
+    },
+    references: [
+      { title: 'Signal: Technical Documentation', url: 'https://signal.org/docs/' },
+      { title: 'EFF: Communicating Privately', url: 'https://ssd.eff.org/module/how-to-use-signal' },
+      { title: 'WhatsApp Encryption Overview', url: 'https://www.whatsapp.com/security/' }
+    ]
   }
 };
