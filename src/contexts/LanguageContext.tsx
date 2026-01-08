@@ -44,6 +44,8 @@ const translations: Translations = {
   
   'article6.title': { en: 'GDPR: Know Your Rights', fr: 'RGPD : Connaissez Vos Droits' },
   'article6.excerpt': { en: 'Understanding your data protection rights under European regulation.', fr: 'Comprendre vos droits en matière de protection des données selon le règlement européen.' },
+  'article7.excerpt': { en: 'Learn how to protect your data when using shared or public computers.', fr: 'Apprenez à protéger vos données sur un ordinateur partagé ou public.' },
+  'article8.excerpt': { en: 'Understand how encrypted messaging apps protect your conversations.', fr: 'Comprenez comment les applications de messagerie chiffrées protègent vos conversations.' },
   
   // Footer
   'footer.description': { en: 'Your trusted resource for data protection and online privacy.', fr: 'Votre ressource de confiance pour la protection des données et la vie privée en ligne.' },

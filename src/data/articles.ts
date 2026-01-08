@@ -13,6 +13,8 @@ export const articles: Article[] = [
   { id: 4, slug: 'disk-encryption-veracrypt', category: 'Encryption', readTime: 8, date: '2025-12-20' },
   { id: 5, slug: 'phishing-spot-fake-emails', category: 'Phishing', readTime: 6, date: '2025-12-15' },
   { id: 6, slug: 'gdpr-know-your-rights', category: 'Legal', readTime: 9, date: '2025-12-10' },
+  { id: 7, slug: 'private-browsing-public-computer', category: 'Privacy', readTime: 7, date: '2026-01-05' },
+  { id: 8, slug: 'secure-messaging-apps', category: 'Privacy', readTime: 8, date: '2026-01-03' },
 ];
 
 export const getArticleBySlug = (slug: string): Article | undefined => {
